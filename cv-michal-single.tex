@@ -1,0 +1,222 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+\documentclass[10pt, a4paper]{article}
+
+%-------------------------------------------------------------------------------
+% PACKAGES
+%-------------------------------------------------------------------------------
+\usepackage[margin=0pt]{geometry}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{amssymb}
+
+%-------------------------------------------------------------------------------
+% FONTS
+%-------------------------------------------------------------------------------
+\setmainfont{Avenir Next}
+\setsansfont{Helvetica Neue}
+
+%-------------------------------------------------------------------------------
+% COLORS
+%-------------------------------------------------------------------------------
+\definecolor{sidebar}{HTML}{2C3E50}
+\definecolor{sidetext}{HTML}{ECF0F1}
+\definecolor{sidehighlight}{HTML}{3498DB}
+\definecolor{maintext}{HTML}{333333}
+\definecolor{heading}{HTML}{2C3E50}
+\definecolor{accent}{HTML}{2980B9}
+\definecolor{lightgray}{HTML}{95A5A6}
+\definecolor{itemgray}{HTML}{7F8C8D}
+
+%-------------------------------------------------------------------------------
+% HYPERLINK STYLE
+%-------------------------------------------------------------------------------
+\hypersetup{
+  colorlinks=true,
+  linkcolor=accent,
+  urlcolor=accent
+}
+
+%-------------------------------------------------------------------------------
+% CUSTOM COMMANDS
+%-------------------------------------------------------------------------------
+\newcommand{\cvsection}[1]{%
+  \vspace{4pt}%
+  {\large\bfseries\color{heading}\MakeUppercase{#1}}\\[-2pt]%
+  {\color{accent}\rule{\linewidth}{1pt}}%
+  \vspace{2pt}%
+}
+
+\newcommand{\cventrytitle}[4]{%
+  \vspace{3pt}%
+  {\textbf{#1}}\hfill{\color{lightgray}\small #4}\\%
+  {\color{accent}\small\textbf{#2}}\hfill{\color{lightgray}\small #3}%
+  \vspace{1pt}%
+}
+
+\newcommand{\cvsubsection}[1]{%
+  \vspace{3pt}%
+  {\color{accent}\textbf{\footnotesize\MakeUppercase{#1}}}%
+  \vspace{1pt}%
+}
+
+\newcommand{\cvitem}[1]{%
+  \par\noindent\hangindent=10pt{\color{itemgray}\tiny$\blacksquare$}\hspace{4pt}{\small #1}\par\vspace{0.5pt}%
+}
+
+%-------------------------------------------------------------------------------
+% DOCUMENT
+%-------------------------------------------------------------------------------
+\begin{document}
+\pagestyle{empty}
+\color{maintext}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+%-------------------------------------------------------------------------------
+% SIDEBAR
+%-------------------------------------------------------------------------------
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[sidebar] (current page.north west) rectangle ([xshift=6.5cm]current page.south west);
+\end{tikzpicture}
+
+%-------------------------------------------------------------------------------
+% HEADER
+%-------------------------------------------------------------------------------
+\begin{tikzpicture}[remember picture, overlay]
+  \node[anchor=north west, text width=12cm, xshift=6.9cm, yshift=-1.0cm] at (current page.north west) {%
+    {\fontsize{24}{29}\selectfont\bfseries\color{heading}Michal\ \ Nakiewicz}\\[4pt]
+    {\normalsize\color{accent}Technical Leader\enskip\textperiodcentered\enskip }\\[4pt]
+    {\footnotesize\color{lightgray}%
+      +48 519 687 702\quad\textbar\quad%
+      \href{mailto:m.nakiewicz@gmail.com}{m.nakiewicz@gmail.com}\quad\textbar\quad%
+      \href{https://github.com/m1981}{github/m1981}%
+    }
+  };
+\end{tikzpicture}
+
+\vspace{2.2cm}
+
+%-------------------------------------------------------------------------------
+% SIDEBAR CONTENT
+%-------------------------------------------------------------------------------
+\begin{tikzpicture}[remember picture, overlay]
+  \node[anchor=north west, text width=5.4cm, xshift=0.55cm, yshift=-3.0cm] at (current page.north west) {%
+
+    % --- ABOUT ME ---
+    {\normalsize\bfseries\color{sidehighlight}ABOUT ME}\\[3pt]
+    {\scriptsize\color{sidetext}
+    Technical leader helping large teams adopt AI. Experienced in driving tech adoption across 800+ professionals, running AI workshops, and coaching managers on practical LLM and agentic AI use.%
+    }\\[10pt]
+
+    % --- AI ENABLEMENT ---
+    {\normalsize\bfseries\color{sidehighlight}AI ENABLEMENT}\\[3pt]
+    {\scriptsize\color{sidetext}
+    $\triangleright$\enskip Prompt Engineering Training\\[1pt]
+    $\triangleright$\enskip AI Adoption Coaching\\[1pt]
+    $\triangleright$\enskip Workshop Design \& Delivery\\[1pt]
+    $\triangleright$\enskip Change Management\\[1pt]
+    $\triangleright$\enskip Technology Onboarding%
+    }\\[10pt]
+
+    % --- AI & LLM ---
+    {\normalsize\bfseries\color{sidehighlight}AI \& LLM}\\[3pt]
+    {\scriptsize\color{sidetext}
+    $\triangleright$\enskip OpenAI, Anthropic\\[1pt]
+    $\triangleright$\enskip Agentic AI Workflows\\[1pt]
+    $\triangleright$\enskip Prompt Engineering\\[1pt]
+    $\triangleright$\enskip Embeddings \& RAG%
+    }\\[10pt]
+
+    % --- TECHNICAL ---
+    {\normalsize\bfseries\color{sidehighlight}TECHNICAL}\\[3pt]
+    {\scriptsize\color{sidetext}
+    $\triangleright$\enskip Python\\[1pt]
+    $\triangleright$\enskip Docker, Terraform, Ansible\\[1pt]
+    $\triangleright$\enskip CI/CD (GitLab, GitHub,\\[1pt]
+    \enskip\enskip Jenkins, Azure DevOps)\\[1pt]
+    $\triangleright$\enskip PostgreSQL, MySQL, SQLite\\[1pt]
+    $\triangleright$\enskip Grafana, Loki, QA%
+    }\\[10pt]
+
+    % --- LEADERSHIP ---
+    {\normalsize\bfseries\color{sidehighlight}LEADERSHIP}\\[3pt]
+    {\scriptsize\color{sidetext}
+    $\triangleright$\enskip Team Leadership\\[1pt]
+    $\triangleright$\enskip Cross-functional Coordination\\[1pt]
+    $\triangleright$\enskip Coaching \& Mentoring\\[1pt]
+    $\triangleright$\enskip Stakeholder Communication%
+    }\\[10pt]
+
+    % --- EDUCATION ---
+    {\normalsize\bfseries\color{sidehighlight}EDUCATION}\\[3pt]
+    {\scriptsize\color{sidetext}
+    \textbf{MSc Computer Science}\\[0pt]
+    Poznan Univ. of Technology, 2004--2006\\[4pt]
+    \textbf{BSc IT in Business}\\[0pt]
+    Bydgoszcz Univ. of Business, 2001--2004\\[4pt]
+    \textbf{Continuous Learning}\\[0pt]
+    LLM, Agentic AI, AI Adoption\\[0pt]
+    2023 -- present%
+    }\\[10pt]
+
+    % --- LANGUAGES ---
+    {\normalsize\bfseries\color{sidehighlight}LANGUAGES}\\[3pt]
+    {\scriptsize\color{sidetext}
+    Polish -- Native\\[1pt]
+    English -- Professional%
+    }%
+
+  };
+\end{tikzpicture}
+
+%-------------------------------------------------------------------------------
+% MAIN CONTENT
+%-------------------------------------------------------------------------------
+\hspace*{6.9cm}%
+\begin{minipage}[t]{11.8cm}
+\setlength{\parskip}{1pt}
+\setlength{\rightskip}{0.3cm}
+
+% --- PROFILE ---
+\cvsection{Profile}
+
+Technical leader with a strong track record of helping large teams adopt AI-powered ways of working. Experienced in driving technology adoption across big organisations -- from leading DevOps transformation across 800+ developers to running hands-on AI workshops and prompt engineering coaching. Brings deep engineering credibility together with practical experience helping professionals use LLMs and agentic AI tools in their daily work.
+
+% --- WORK EXPERIENCE ---
+\cvsection{Work Experience}
+
+\cventrytitle{Technical Leader}{Nokia}{Poland}{2017 -- 2026}
+
+\cvsubsection{AI Enablement \& Training}
+\cvitem{Designed and delivered workshops on prompt engineering and AI integration, helping team members use LLM and agentic AI tools in their workflows.}
+\cvitem{Coached engineers on adopting AI-assisted development practices, supporting the team's shift towards AI-augmented ways of working.}
+
+\cvsubsection{Enterprise-Scale Technology Adoption}
+\cvitem{Led DevOps adoption across 800+ developers -- working through resistance to change, building a network of early adopters, and scaling new practices across a large and diverse environment.}
+\cvitem{Led the containerisation initiative using Docker, reducing environment setup from three days to fifteen minutes and standardising practices across 200+ developers.}
+\cvitem{Managed the migration of GitLab pipeline to OpenStack Cloud (34,000 cores), growing the user base from 60 to 800+ developers while maintaining performance and reliability.}
+
+\cvsubsection{Technical Leadership}
+\cvitem{Managed a cross-functional team of eight engineers supporting 5G development, aligning technical delivery with organisational goals.}
+\cvitem{Designed quality gate frameworks for a large-scale C++ codebase exceeding 600,000 lines of code.}
+
+\vspace{2pt}
+
+\cventrytitle{Leading Software Design Engineer}{Imagination Technologies}{UK}{2011 -- 2017}
+\cvitem{Developed SystemC-based software simulators for H.264/AVC and H.264 lossless video decoding standards.}
+\cvitem{Built cycle-accurate hardware models to validate decoder architecture before silicon fabrication. Contributed to IP licensed to major technology clients.}
+
+\vspace{2pt}
+
+\cventrytitle{Software Development Specialist}{Nokia Siemens Networks}{Poland}{2007 -- 2011}
+\cvitem{Co-designed MPLS packet classifier module for carrier-grade Ethernet switches in a real-time operating system.}
+\cvitem{Worked in multinational engineering teams across five countries, with strong cross-cultural communication in distributed environments.}
+
+\end{minipage}
+
+\end{document}

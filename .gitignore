@@ -1,0 +1,17 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.pdf
+
+# Cloned template (large)
+awesome-cv/template/
+
+# OS
+.DS_Store
+
+# IDE
+.idea/

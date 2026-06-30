@@ -1,0 +1,64 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% Template: https://github.com/posquit0/Awesome-CV
+% Template license: CC BY-SA 4.0
+%
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+\documentclass[11pt, a4paper]{awesome-cv}
+
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Color for highlights
+\colorlet{awesome}{awesome-skyblue}
+% Uncomment for custom color:
+% \definecolor{awesome}{HTML}{3E6D9C}
+
+% Text colors
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+\setbool{acvSectionColorHighlight}{true}
+
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+% PERSONAL INFORMATION
+% Fill in your details below
+%-------------------------------------------------------------------------------
+% \photo[rectangle,edge,right]{./profile}
+\name{Michal}{[SURNAME]}
+\position{Technical Leader{\enskip\cdotp\enskip}AI Adoption \& Enablement}
+
+\mobile{[YOUR MOBILE NUMBER]}
+\email{[YOUR EMAIL]}
+\github{[YOUR GITHUB USERNAME]}
+\linkedin{[YOUR LINKEDIN ID]}
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+\makecvheader[C]
+
+\makecvfooter
+  {}
+  {Michal [SURNAME]~~~·~~~CV}
+  {\thepage}
+
+%-------------------------------------------------------------------------------
+% CV CONTENT
+%-------------------------------------------------------------------------------
+\input{resume/profile.tex}
+\input{resume/experience.tex}
+\input{resume/skills.tex}
+\input{resume/education.tex}
+
+\end{document}
