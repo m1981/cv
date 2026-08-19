@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Michal Nakiewicz - Staff Software Engineer & AI Architect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #525659;
+      color: #333333;
+      display: flex;
+      justify-content: center;
+      padding: 20px 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Format A4 */
+    .resume-container {
+      width: 210mm;
+      height: 297mm;
+      min-height: 297mm;
+      background-color: #ffffff;
+      display: flex;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Lewa kolumna (Sidebar) */
+    .sidebar {
+      width: 32%;
+      background-color: #1f3448;
+      color: #e2e8f0;
+      padding: 110px 18px 24px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .sidebar-section {
+      display: flex;
+      flex-direction: column;
+      gap: 3.5px;
+    }
+
+    .sidebar-title {
+      font-size: 9pt;
+      font-weight: 700;
+      color: #38bdf8;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .sidebar-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .sidebar-list li {
+      font-size: 7.6pt;
+      line-height: 1.3;
+      color: #e2e8f0;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .sidebar-list li::before {
+      content: "▷";
+      color: #38bdf8;
+      font-size: 7pt;
+      margin-right: 5px;
+      line-height: 1.3;
+      flex-shrink: 0;
+    }
+
+    /* Edukacja i języki */
+    .edu-item {
+      margin-bottom: 4px;
+    }
+    .edu-item:last-child {
+      margin-bottom: 0;
+    }
+    .edu-degree {
+      font-weight: 700;
+      color: #ffffff;
+      font-size: 7.6pt;
+    }
+    .edu-institution {
+      font-size: 7.2pt;
+      color: #94a3b8;
+      line-height: 1.25;
+    }
+    .lang-item {
+      font-size: 7.6pt;
+      color: #e2e8f0;
+      line-height: 1.3;
+    }
+
+    /* Prawa kolumna (Main Content) */
+    .main-content {
+      width: 68%;
+      padding: 28px 30px 20px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+
+    /* Nagłówek */
+    .header {
+      margin-bottom: 4px;
+    }
+
+    .name {
+      font-size: 24pt;
+      font-weight: 800;
+      color: #1f3448;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+    }
+
+    .title-subtitle {
+      font-size: 10pt;
+      font-weight: 600;
+      color: #0284c7;
+      margin-top: 3px;
+      margin-bottom: 4px;
+      letter-spacing: 0.2px;
+    }
+
+    .contact-info {
+      font-size: 7.8pt;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    .contact-info a {
+      color: #0284c7;
+      text-decoration: none;
+    }
+
+    .contact-info span.separator {
+      color: #cbd5e1;
+      margin: 0 4px;
+    }
+
+    /* Sekcje główne */
+    .main-section {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .section-heading {
+      font-size: 10pt;
+      font-weight: 800;
+      color: #1f3448;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1.5px solid #1f3448;
+      padding-bottom: 2px;
+      margin-bottom: 2px;
+    }
+
+    .profile-text {
+      font-size: 7.9pt;
+      line-height: 1.4;
+      color: #334155;
+      text-align: justify;
+    }
+
+    /* Doświadczenie i projekty */
+    .job-block {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      margin-bottom: 6px;
+    }
+
+    .job-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .job-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .job-title {
+      font-size: 8.8pt;
+      font-weight: 700;
+      color: #1f3448;
+    }
+
+    .job-company {
+      font-size: 8.4pt;
+      font-weight: 700;
+      color: #0284c7;
+    }
+
+    .job-meta {
+      font-size: 7.8pt;
+      color: #94a3b8;
+      font-weight: 500;
+    }
+
+    .job-subcategory {
+      font-size: 7.2pt;
+      font-weight: 700;
+      color: #0284c7;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      margin-top: 2px;
+    }
+
+    .job-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .job-bullets li {
+      font-size: 7.6pt;
+      line-height: 1.34;
+      color: #334155;
+      position: relative;
+      padding-left: 11px;
+      text-align: justify;
+    }
+
+    .job-bullets li::before {
+      content: "■";
+      color: #475569;
+      font-size: 5pt;
+      position: absolute;
+      left: 0;
+      top: 1.8px;
+    }
+
+    /* Print */
+    @media print {
+      body {
+        background: none;
+        padding: 0;
+      }
+      .resume-container {
+        box-shadow: none;
+        width: 210mm;
+        height: 297mm;
+        min-height: 297mm;
+      }
+      @page {
+        size: A4;
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="resume-container">
+    
+    <!-- LEWA KOLUMNA (SIDEBAR) -->
+    <aside class="sidebar">
+      
+      <section class="sidebar-section">
+        <h2 class="sidebar-title">AI &amp; AGENTIC SYSTEMS</h2>
+        <ul class="sidebar-list">
+          <li>Model Context Protocol (MCP/FastMCP)</li>
+          <li>Graph-based Workflow Runtime</li>
+          <li>LlamaIndex, VoyageAI Reranking</li>
+          <li>Multi-Provider (Claude, OpenAI, Gemini)</li>
+          <li>Vector DBs (ChromaDB, FAISS, mem0ai)</li>
+          <li>RAG Pipelines &amp; Dialogue Tagging</li>
+        </ul>
+      </section>
+
+      <section class="sidebar-section">
+        <h2 class="sidebar-title">BACKEND &amp; ARCHITECTURE</h2>
+        <ul class="sidebar-list">
+          <li>Python (FastAPI, Pydantic v2, Uvicorn)</li>
+          <li>Modular Monoliths &amp; uv Workspaces</li>
+          <li>Domain-Driven Design (DDD, Shared Core)</li>
+          <li>Anti-Corruption Layer (ACL Architecture)</li>
+          <li>SQLAlchemy, SQLModel, Supabase</li>
+          <li>WebSockets, AsyncIO, Distributed Events</li>
+        </ul>
+      </section>
+
+      <section class="sidebar-section">
+        <h2 class="sidebar-title">QUALITY &amp; OBSERVABILITY</h2>
+        <ul class="sidebar-list">
+          <li>Mutation Testing (mutmut)</li>
+          <li>Property-Based Testing (Hypothesis)</li>
+          <li>mypy (--strict), Ruff (Linter/Formatter)</li>
+          <li>pytest, pytest-asyncio, Playwright E2E</li>
+          <li>OpenTelemetry, Prometheus, Sentry</li>
+        </ul>
+      </section>
+
+      <section class="sidebar-section">
+        <h2 class="sidebar-title">SYSTEMS &amp; DEVOPS</h2>
+        <ul class="sidebar-list">
+          <li>C/C++, SystemC, RTOS (Low-Level Core)</li>
+          <li>Docker, OpenStack Cloud (34k cores)</li>
+          <li>CI/CD Automation (GitLab, GitHub Actions)</li>
+          <li>Linux Internals, Concurrency, Networking</li>
+        </ul>
+      </section>
+
+      <section class="sidebar-section">
+        <h2 class="sidebar-title">EDUCATION</h2>
+        <div class="edu-item">
+          <div class="edu-degree">MSc Computer Science</div>
+          <div class="edu-institution">Poznan Univ. of Technology, 2004–2006</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-degree">BSc IT in Business</div>
+          <div class="edu-institution">Bydgoszcz Univ. of Business, 2001–2004</div>
+        </div>
+      </section>
+
+      <section class="sidebar-section">
+        <h2 class="sidebar-title">LANGUAGES</h2>
+        <div class="lang-item">Polish – Native</div>
+        <div class="lang-item">English – Professional</div>
+      </section>
+
+    </aside>
+
+    <!-- PRAWA KOLUMNA (MAIN CONTENT) -->
+    <main class="main-content">
+      
+      <!-- Nagłówek -->
+      <header class="header">
+        <h1 class="name">Michal Nakiewicz</h1>
+        <div class="title-subtitle">Staff Software Engineer &amp; AI Systems Architect</div>
+        <div class="contact-info">
+          <a href="tel:+48519687702">+48 519 687 702</a>
+          <span class="separator">|</span>
+          <a href="mailto:m.nakiewicz@gmail.com">m.nakiewicz@gmail.com</a>
+          <span class="separator">|</span>
+          <a href="https://github.com/m1981" target="_blank" rel="noopener">github/m1981</a>
+        </div>
+      </header>
+
+      <!-- Profile -->
+      <section class="main-section">
+        <h2 class="section-heading">PROFILE</h2>
+        <p class="profile-text">
+          Staff Software Engineer and Systems Architect with 15+ years of experience designing high-reliability, enterprise-scale software. Combines low-level systems pedigree (C/C++, RTOS, 5G) with cutting-edge expertise in Python modular architectures, multi-provider LLM orchestration, and Model Context Protocol (MCP). Champion of extreme software verification (mutation testing, property-based testing) and production observability (OpenTelemetry). Proven track record of scaling architectures and engineering practices across 800+ developers.
+        </p>
+      </section>
+
+      <!-- System Architecture & AI Projects -->
+      <section class="main-section">
+        <h2 class="section-heading">SYSTEMS ARCHITECTURE &amp; AI INITIATIVES</h2>
+
+        <div class="job-block">
+          <div class="job-header-row">
+            <span class="job-title">Agentic Workflow Orchestration &amp; RAG Systems</span>
+            <span class="job-meta">Python · FastMCP · LlamaIndex</span>
+          </div>
+          <ul class="job-bullets">
+            <li>Architected deterministic node/edge graph workflow runtimes integrating Model Context Protocol (MCP/FastMCP), persistent agent memory (mem0ai), and in-process vector retrieval (FAISS/ChromaDB).</li>
+            <li>Engineered production-grade RAG pipelines utilizing LlamaIndex, VoyageAI embedding/reranking models, and Claude/OpenAI APIs, optimizing retrieval precision and token efficiency.</li>
+            <li>Constructed hexagonal service architectures with full production observability (OpenTelemetry tracing, Prometheus metrics, Sentry error tracking) and Supabase/JWT auth backends.</li>
+          </ul>
+        </div>
+
+        <div class="job-block">
+          <div class="job-header-row">
+            <span class="job-title">Modular Monolith Architecture &amp; Domain Core</span>
+            <span class="job-meta">FastAPI · Pydantic v2 · uv Workspaces</span>
+          </div>
+          <ul class="job-bullets">
+            <li>Designed and maintained a 6-package modular monolith bound by a shared domain kernel (<span style="font-family: monospace;">kuchnie-core</span>) within a <span style="font-family: monospace;">uv</span> monorepo workspace, enforcing strict domain boundaries.</li>
+            <li>Implemented an Anti-Corruption Layer (ACL, ADR-009) to cleanly decouple complex external 3D/CAD runtimes from core business domain logic and automated CNC/CAM manufacturing outputs.</li>
+            <li>Instituted extreme quality verification gates using mutation testing (<span style="font-family: monospace;">mutmut</span>), property-based testing (<span style="font-family: monospace;">Hypothesis</span>), and strict static typing (<span style="font-family: monospace;">mypy --strict</span>).</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Professional Career -->
+      <section class="main-section">
+        <h2 class="section-heading">WORK EXPERIENCE</h2>
+
+        <!-- Nokia -->
+        <div class="job-block">
+          <div class="job-header-row">
+            <span class="job-title">Technical Leader</span>
+            <span class="job-meta">2017 – 2026</span>
+          </div>
+          <div class="job-header-row">
+            <span class="job-company">Nokia</span>
+            <span class="job-meta">Poland</span>
+          </div>
+
+          <div class="job-subcategory">ENTERPRISE SCALE &amp; CLOUD INFRASTRUCTURE</div>
+          <ul class="job-bullets">
+            <li>Led DevOps and engineering transformation across 800+ developers, standardizing practices and containerizing workflows via Docker (reduced environment setup from 3 days to 15 minutes).</li>
+            <li>Managed the migration of GitLab CI/CD pipelines to OpenStack Cloud (34,000 cores), scaling user capacity from 60 to 800+ engineers while ensuring high availability.</li>
+          </ul>
+
+          <div class="job-subcategory">SYSTEMS LEADERSHIP &amp; QUALITY FRAMEWORKS</div>
+          <ul class="job-bullets">
+            <li>Designed automated quality gate frameworks for a massive C++ codebase exceeding 600,000 LOC, steering delivery for a cross-functional 5G development team.</li>
+            <li>Delivered engineering workshops on LLM integration, agentic workflows, and prompt engineering, mentoring teams on AI-assisted development paradigms.</li>
+          </ul>
+        </div>
+
+        <!-- Imagination -->
+        <div class="job-block">
+          <div class="job-header-row">
+            <span class="job-title">Leading Software Design Engineer</span>
+            <span class="job-meta">2011 – 2017</span>
+          </div>
+          <div class="job-header-row">
+            <span class="job-company">Imagination Technologies</span>
+            <span class="job-meta">UK</span>
+          </div>
+          <ul class="job-bullets">
+            <li>Developed SystemC-based cycle-accurate hardware models and software simulators to validate H.264/AVC video decoder architectures prior to silicon fabrication for global IP licensees.</li>
+          </ul>
+        </div>
+
+        <!-- NSN -->
+        <div class="job-block">
+          <div class="job-header-row">
+            <span class="job-title">Software Development Specialist</span>
+            <span class="job-meta">2007 – 2011</span>
+          </div>
+          <div class="job-header-row">
+            <span class="job-company">Nokia Siemens Networks</span>
+            <span class="job-meta">Poland</span>
+          </div>
+          <ul class="job-bullets">
+            <li>Co-designed real-time MPLS packet classifier modules for carrier-grade Ethernet switches in RTOS.</li>
+          </ul>
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+</body>
+</html>
