@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Michal Nakiewicz - Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #525659;
+      color: #333333;
+      display: flex;
+      justify-content: center;
+      padding: 20px 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Format A4 */
+    .resume-container {
+      width: 210mm;
+      min-height: 297mm;
+      height: 297mm;
+      background-color: #ffffff;
+      display: flex;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Lewa kolumna (Sidebar) */
+    .sidebar {
+      width: 31%;
+      background-color: #1f3448;
+      color: #e2e8f0;
+      /* Obniżenie treści o 112px, aby ABOUT ME zrównało się z PROFILE */
+      padding: 112px 20px 24px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .sidebar-section {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .sidebar-title {
+      font-size: 10pt;
+      font-weight: 700;
+      color: #38bdf8;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .sidebar-text {
+      font-size: 7.8pt;
+      line-height: 1.38;
+      color: #cbd5e1;
+      text-align: left;
+    }
+
+    .sidebar-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 3.5px;
+    }
+
+    .sidebar-list li {
+      font-size: 7.8pt;
+      line-height: 1.3;
+      color: #e2e8f0;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .sidebar-list li::before {
+      content: "▷";
+      color: #38bdf8;
+      font-size: 7.5pt;
+      margin-right: 6px;
+      line-height: 1.3;
+      flex-shrink: 0;
+    }
+
+    /* Edukacja i języki */
+    .edu-item {
+      margin-bottom: 4px;
+    }
+
+    .edu-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .edu-degree {
+      font-weight: 700;
+      color: #ffffff;
+      font-size: 7.8pt;
+    }
+
+    .edu-institution {
+      font-size: 7.4pt;
+      color: #94a3b8;
+      line-height: 1.25;
+    }
+
+    .lang-item {
+      font-size: 7.8pt;
+      color: #e2e8f0;
+      line-height: 1.35;
+    }
+
+    /* Prawa kolumna (Main Content) */
+    .main-content {
+      width: 69%;
+      padding: 30px 32px 24px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    /* Nagłówek */
+    .header {
+      margin-bottom: 6px;
+    }
+
+    .name {
+      font-size: 25pt;
+      font-weight: 800;
+      color: #1f3448;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+    }
+
+    .title-subtitle {
+      font-size: 10.5pt;
+      font-weight: 500;
+      color: #64748b;
+      margin-top: 3px;
+      margin-bottom: 5px;
+    }
+
+    .contact-info {
+      font-size: 8pt;
+      color: #38bdf8;
+      font-weight: 500;
+    }
+
+    .contact-info a {
+      color: #0284c7;
+      text-decoration: none;
+    }
+
+    .contact-info span.separator {
+      color: #94a3b8;
+      margin: 0 4px;
+    }
+
+    /* Sekcje główne */
+    .main-section {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .section-heading {
+      font-size: 11pt;
+      font-weight: 800;
+      color: #1f3448;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1.5px solid #1f3448;
+      padding-bottom: 2px;
+      margin-bottom: 3px;
+    }
+
+    .profile-text {
+      font-size: 8.2pt;
+      line-height: 1.42;
+      color: #334155;
+      text-align: justify;
+    }
+
+    /* Doświadczenie */
+    .job-block {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-bottom: 7px;
+    }
+
+    .job-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .job-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .job-title {
+      font-size: 9.2pt;
+      font-weight: 700;
+      color: #1f3448;
+    }
+
+    .job-company {
+      font-size: 8.8pt;
+      font-weight: 700;
+      color: #0284c7;
+    }
+
+    .job-meta {
+      font-size: 8pt;
+      color: #94a3b8;
+      font-weight: 400;
+    }
+
+    .job-subcategory {
+      font-size: 7.5pt;
+      font-weight: 700;
+      color: #0284c7;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      margin-top: 3px;
+      margin-bottom: 1px;
+    }
+
+    .job-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 3.5px;
+    }
+
+    .job-bullets li {
+      font-size: 7.8pt;
+      line-height: 1.34;
+      color: #334155;
+      position: relative;
+      padding-left: 12px;
+      text-align: justify;
+    }
+
+    .job-bullets li::before {
+      content: "■";
+      color: #475569;
+      font-size: 5.5pt;
+      position: absolute;
+      left: 0;
+      top: 1.5px;
+    }
+
+    /* Druk */
+    @media print {
+      body {
+        background: none;
+        padding: 0;
+      }
+      .resume-container {
+        box-shadow: none;
+        width: 210mm;
+        height: 297mm;
+        min-height: 297mm;
+      }
+      @page {
+        size: A4;
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="resume-container">
+    
+    <!-- LEWA KOLUMNA (SIDEBAR) -->
+    <aside class="sidebar">
+      
+      <section class="sidebar-section">
+        <h2 class="sidebar-title">ABOUT ME</h2>
+        <p class="sidebar-text">
+          Technical leader helping large teams adopt AI. Experienced in driving tech adoption across 800+ professionals, running AI workshops, and coaching managers on practical LLM and agentic AI use.
+        </p>
+      </section>
+
+      <section class="sidebar-section">
+        <h2 class="sidebar-title">AI ENABLEMENT</h2>
+        <ul class="sidebar-list">
+          <li>Prompt Engineering Training</li>
+          <li>AI Adoption Coaching</li>
+          <li>Workshop Design &amp; Delivery</li>
+          <li>Change Management</li>
+          <li>Technology Onboarding</li>
+        </ul>
+      </section>
+
+      <section class="sidebar-section">
+        <h2 class="sidebar-title">AI &amp; LLM</h2>
+        <ul class="sidebar-list">
+          <li>OpenAI, Anthropic</li>
+          <li>Agentic AI Workflows</li>
+          <li>Prompt Engineering</li>
+          <li>Embeddings &amp; RAG</li>
+        </ul>
+      </section>
+
+      <section class="sidebar-section">
+        <h2 class="sidebar-title">TECHNICAL</h2>
+        <ul class="sidebar-list">
+          <li>Python</li>
+          <li>Docker, Terraform, Ansible</li>
+          <li>CI/CD (GitLab, GitHub,<br>Jenkins, Azure DevOps)</li>
+          <li>PostgreSQL, MySQL, SQLite</li>
+          <li>Grafana, Loki, QA</li>
+        </ul>
+      </section>
+
+      <section class="sidebar-section">
+        <h2 class="sidebar-title">LEADERSHIP</h2>
+        <ul class="sidebar-list">
+          <li>Team Leadership</li>
+          <li>Cross-functional Coordination</li>
+          <li>Coaching &amp; Mentoring</li>
+          <li>Stakeholder Communication</li>
+        </ul>
+      </section>
+
+      <section class="sidebar-section">
+        <h2 class="sidebar-title">EDUCATION</h2>
+        <div class="edu-item">
+          <div class="edu-degree">MSc Computer Science</div>
+          <div class="edu-institution">Poznan Univ. of Technology, 2004–2006</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-degree">BSc IT in Business</div>
+          <div class="edu-institution">Bydgoszcz Univ. of Business, 2001–2004</div>
+        </div>
+        <div class="edu-item" style="margin-top: 3px;">
+          <div class="edu-degree">Continuous Learning</div>
+          <div class="edu-institution">LLM, Agentic AI, AI Adoption<br>2023 – present</div>
+        </div>
+      </section>
+
+      <section class="sidebar-section">
+        <h2 class="sidebar-title">LANGUAGES</h2>
+        <div class="lang-item">Polish – Native</div>
+        <div class="lang-item">English – Professional</div>
+      </section>
+
+    </aside>
+
+    <!-- PRAWA KOLUMNA (GŁÓWNA TREŚĆ) -->
+    <main class="main-content">
+      
+      <!-- Nagłówek z danymi kontaktowymi -->
+      <header class="header">
+        <h1 class="name">Michal Nakiewicz</h1>
+        <div class="title-subtitle">Technical Leader ·</div>
+        <div class="contact-info">
+          <a href="tel:+48519687702">+48 519 687 702</a>
+          <span class="separator">|</span>
+          <a href="mailto:m.nakiewicz@gmail.com">m.nakiewicz@gmail.com</a>
+          <span class="separator">|</span>
+          <a href="https://github.com/m1981" target="_blank" rel="noopener">github/m1981</a>
+        </div>
+      </header>
+
+      <!-- Profile -->
+      <section class="main-section">
+        <h2 class="section-heading">PROFILE</h2>
+        <p class="profile-text">
+          Technical leader with a strong track record of helping large teams adopt AI-powered ways of working. Experienced in driving technology adoption across big organisations – from leading DevOps transformation across 800+ developers to running hands-on AI workshops and prompt engineering coaching. Brings deep engineering credibility together with practical experience helping professionals use LLMs and agentic AI tools in their daily work.
+        </p>
+      </section>
+
+      <!-- Work Experience -->
+      <section class="main-section">
+        <h2 class="section-heading">WORK EXPERIENCE</h2>
+
+        <!-- Pozycja 1: Nokia -->
+        <div class="job-block">
+          <div class="job-header-row">
+            <span class="job-title">Technical Leader</span>
+            <span class="job-meta">2017 – 2026</span>
+          </div>
+          <div class="job-header-row">
+            <span class="job-company">Nokia</span>
+            <span class="job-meta">Poland</span>
+          </div>
+
+          <div class="job-subcategory">AI ENABLEMENT &amp; TRAINING</div>
+          <ul class="job-bullets">
+            <li>Designed and delivered workshops on prompt engineering and AI integration, helping team members use LLM and agentic AI tools in their workflows.</li>
+            <li>Coached engineers on adopting AI-assisted development practices, supporting the team’s shift towards AI-augmented ways of working.</li>
+          </ul>
+
+          <div class="job-subcategory">ENTERPRISE-SCALE TECHNOLOGY ADOPTION</div>
+          <ul class="job-bullets">
+            <li>Led DevOps adoption across 800+ developers – working through resistance to change, building a network of early adopters, and scaling new practices across a large and diverse environment.</li>
+            <li>Led the containerisation initiative using Docker, reducing environment setup from three days to fifteen minutes and standardising practices across 200+ developers.</li>
+            <li>Managed the migration of GitLab pipeline to OpenStack Cloud (34,000 cores), growing the user base from 60 to 800+ developers while maintaining performance and reliability.</li>
+          </ul>
+
+          <div class="job-subcategory">TECHNICAL LEADERSHIP</div>
+          <ul class="job-bullets">
+            <li>Managed a cross-functional team of eight engineers supporting 5G development, aligning technical delivery with organisational goals.</li>
+            <li>Designed quality gate frameworks for a large-scale C++ codebase exceeding 600,000 lines of code.</li>
+          </ul>
+        </div>
+
+        <!-- Pozycja 2: Imagination Technologies -->
+        <div class="job-block">
+          <div class="job-header-row">
+            <span class="job-title">Leading Software Design Engineer</span>
+            <span class="job-meta">2011 – 2017</span>
+          </div>
+          <div class="job-header-row">
+            <span class="job-company">Imagination Technologies</span>
+            <span class="job-meta">UK</span>
+          </div>
+          <ul class="job-bullets" style="margin-top: 3px;">
+            <li>Developed SystemC-based software simulators for H.264/AVC and H.264 lossless video decoding standards.</li>
+            <li>Built cycle-accurate hardware models to validate decoder architecture before silicon fabrication. Contributed to IP licensed to major technology clients.</li>
+          </ul>
+        </div>
+
+        <!-- Pozycja 3: Nokia Siemens Networks -->
+        <div class="job-block">
+          <div class="job-header-row">
+            <span class="job-title">Software Development Specialist</span>
+            <span class="job-meta">2007 – 2011</span>
+          </div>
+          <div class="job-header-row">
+            <span class="job-company">Nokia Siemens Networks</span>
+            <span class="job-meta">Poland</span>
+          </div>
+          <ul class="job-bullets" style="margin-top: 3px;">
+            <li>Co-designed MPLS packet classifier module for carrier-grade Ethernet switches in a real-time operating system.</li>
+            <li>Worked in multinational engineering teams across five countries, with strong cross-cultural communication in distributed environments.</li>
+          </ul>
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+</body>
+</html>
