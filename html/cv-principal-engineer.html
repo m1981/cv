@@ -200,7 +200,7 @@
             </div>
             <div class="skill-category">
                 <strong>Quality Assurance & Observability</strong>
-                pytest, Mutation Testing (mutmut), Contract Testing, mypy --strict, OpenTelemetry, Sentry.
+                pytest, Mutation Testing (mutmut), Contract Testing, Static Typing (mypy), OpenTelemetry, Sentry.
             </div>
             <div class="skill-category">
                 <strong>Infrastructure & Low-Level</strong>
@@ -221,7 +221,7 @@
             <ul>
                 <li><strong>Architected a Manufacturing ERP/CAM System:</strong> Led the design and implementation of a production-grade modular monolith for a furniture manufacturing client. Engineered a highly cohesive domain architecture comprising 11 interconnected packages managed via <code>uv workspace</code>. Modeled the complex business domain using 110+ Pydantic v2/SQLModel classes and exposed 70+ REST endpoints via FastAPI.</li>
                 <li><strong>Developed a CNC CAM Engine & BOM Calculator:</strong> Created an engine generating production-ready DXF files for CNC machines, mapping 8 distinct drilling categories to specific production layers. Designed a recursive Bill of Materials (BOM) engine with cost calculation and product variance handling.</li>
-                <li><strong>Engineered Multi-Provider LLM Abstraction:</strong> Implemented a multi-agent orchestrator abstracting Anthropic Claude, Google Gemini, and Xiaomi Mimo (via custom base_url) behind a single Protocol interface, enabling seamless model swapping.</li>
+
                 <li><strong>Designed Advanced RAG Pipelines:</strong> Deployed a 2-stage retrieval system (top-10 similarity followed by top-3 VoyageAI reranking) to optimize context windows and improve generation accuracy.</li>
                 <li><strong>Enforced Uncompromising Engineering Rigor:</strong> Designed and maintained comprehensive test suites comprising over 3,400 test cases across the entire system architecture with a hard 80% coverage gate. Achieved a 91.4% mutation score (342/374 mutants killed via <code>mutmut</code>) on critical parsing modules.</li>
                 <li><strong>Pioneered Eval-Driven AI Development:</strong> Replaced manual LLM testing with 130+ automated contract tests for the multi-provider orchestrator and documented 11 iterative evaluation runs for dialogue act tagging quality. Maintained strict static typing (<code>mypy --strict</code>) across 120+ core files.</li>
