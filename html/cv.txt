@@ -1,17 +1,23 @@
-Principal Software Engineer & Core Architect | Hands-on Technical Lead
-Mission-Critical Systems • AI Reliability & Eval-Driven Architecture • High-Rigor Backend
+Michal Nakiewicz
+Principal Software Engineer | Systems & AI Architect
+Mission-Critical Architecture • AI Reliability & Eval-Driven Systems • High-Rigor Backend
 
 Professional Summary
 Hands-on Principal Software Engineer with 19 years of deep engineering experience spanning low-level systems (C/C++, RTOS), hyperscale enterprise platform infrastructure (34,000-core OpenStack), and modern deterministic AI/Backend architectures (Python).
 Specializes in architecting mission-critical, high-rigor systems using Domain-Driven Design (Modular Monoliths) and production-grade Agentic AI pipelines. Known for an uncompromising approach to software correctness—leveraging strict typing, mutation testing, and eval-driven validation to bring deterministic reliability to complex, non-deterministic LLM workflows. Operates purely on the Individual Contributor (IC) track, leading by reference implementations, architectural prototypes, and engineering excellence.
 
-
-Experience: Current Role
+Experience
 Principal Software Architect & Core Engineer
 Independent Consulting | DeepTech & Industrial AI
 Jan 2026 – Present
-Domain-Driven Modular Architecture: Architected and implemented a high-reliability Modular Monolith for an industrial manufacturing platform using Domain-Driven Design (DDD) principles. Enforced strict domain boundaries across isolated packages managed via uv workspace, eliminating microservice network latency and operational complexity while maintaining high cohesion.
-Algorithmic CAM Engine & Recursive BOM: Engineered a high-precision CNC CAM parsing engine and recursive Bill of Materials (BOM) calculator. Automated the end-to-end translation of complex product variance into machine-ready DXF layers, eliminating manual manufacturing errors and automating production pipeline execution.
-Fault-Tolerant AI & Eval-Driven Architecture: Designed an LLM orchestration layer featuring automated multi-provider failover (Anthropic, Gemini, OpenAI). Implemented a 2-stage retrieval pipeline (top-10 similarity search followed by top-3 VoyageAI reranking) backed by 130+ automated contract tests and systematic evaluation runs to guarantee deterministic outputs.
-Ultra-High Engineering Rigor & Quality Gates: Established an uncompromising testing framework with over 3,400 automated tests and an enforced 80% coverage threshold. Achieved a 91.4% mutation score (342/374 mutants killed via mutmut) on critical parsing and computational modules under mypy --strict typing standards.
-Tech Stack: Python, FastAPI, Pydantic v2, SQLModel, LlamaIndex, VoyageAI, Anthropic/Gemini APIs, uv, mutmut, pytest, mypy --strict, OpenTelemetry.
+
+• Domain-Driven Modular Architecture: Architected a production Modular Monolith for an industrial manufacturing platform using Domain-Driven Design (DDD). Engineered a shared domain kernel and Anti-Corruption Layer (ACL) across isolated packages managed via uv workspace, eliminating microservice operational overhead while guaranteeing strict boundary isolation.
+• Algorithmic CAM Engine & Recursive BOM: Designed and built a deterministic CNC CAM engine and recursive BOM processor. Automated the translation of dynamic product configurations into machine-ready DXF layers and recursive assembly trees with automated cost computation, eliminating manual production errors.
+• Fault-Tolerant Agentic AI & Eval-Driven Architecture: Architected a type-safe LLM orchestration layer with automated multi-provider failover (Anthropic, Gemini, OpenAI-compatible endpoints) and tool-execution routing. Built a 2-stage retrieval pipeline (vector similarity search + VoyageAI reranking) validated by 130+ provider contract tests and systematic regression eval datasets to enforce deterministic output schemas.
+• Ultra-High Engineering Rigor & Quality Gates: Enforced strict quality gates across 3,400+ automated test cases with a mandatory 80% coverage threshold in CI. Achieved a 91.4% mutation score via mutmut on critical parsing and computational modules under codebase-wide mypy --strict typing standards.
+
+Tech Stack:
+• Backend & Core: Python, FastAPI, Pydantic v2, SQLModel, Domain-Driven Design (DDD)
+• AI & Retrieval: LlamaIndex, VoyageAI, Anthropic/Gemini APIs, Agentic Tool Routing
+• Rigor & Quality: mutmut (Mutation Testing), pytest, mypy (--strict), Contract Testing
+• Tooling & Infra: uv workspaces, OpenTelemetry, structlog, ezdxf
