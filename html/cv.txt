@@ -10,14 +10,7 @@ Experience
 Principal Software Architect & Core Engineer
 Independent Consulting | DeepTech & Industrial AI
 Jan 2026 – Present
-
-• Domain-Driven Modular Architecture: Architected a production Modular Monolith for an industrial manufacturing platform using Domain-Driven Design (DDD). Engineered a shared domain kernel and Anti-Corruption Layer (ACL) across isolated packages managed via uv workspace, eliminating microservice operational overhead while guaranteeing strict boundary isolation.
-• Algorithmic CAM Engine & Recursive BOM: Designed and built a deterministic CNC CAM engine and recursive BOM processor. Automated the translation of dynamic product configurations into machine-ready DXF layers and recursive assembly trees with automated cost computation, eliminating manual production errors.
-• Fault-Tolerant Agentic AI & Eval-Driven Architecture: Architected a type-safe LLM orchestration layer with automated multi-provider failover (Anthropic, Gemini, OpenAI-compatible endpoints) and tool-execution routing. Built a 2-stage retrieval pipeline (vector similarity search + VoyageAI reranking) validated by 130+ provider contract tests and systematic regression eval datasets to enforce deterministic output schemas.
-• Ultra-High Engineering Rigor & Quality Gates: Enforced strict quality gates across 3,400+ automated test cases with a mandatory 80% coverage threshold in CI. Achieved a 91.4% mutation score via mutmut on critical parsing and computational modules under codebase-wide mypy --strict typing standards.
-
-Tech Stack:
-• Backend & Core: Python, FastAPI, Pydantic v2, SQLModel, Domain-Driven Design (DDD)
-• AI & Retrieval: LlamaIndex, VoyageAI, Anthropic/Gemini APIs, Agentic Tool Routing
-• Rigor & Quality: mutmut (Mutation Testing), pytest, mypy (--strict), Contract Testing
-• Tooling & Infra: uv workspaces, OpenTelemetry, structlog, ezdxf
+Domain-Driven Modular Architecture: Architected a production Modular Monolith for an industrial manufacturing platform using Domain-Driven Design (DDD). Engineered a shared domain kernel and Anti-Corruption Layer (ACL) across isolated packages managed via uv workspace, eliminating microservice operational overhead while guaranteeing strict boundary isolation.
+Algorithmic CAM Engine & Recursive BOM: Designed and built a deterministic CNC CAM engine and recursive BOM processor. Automated the translation of dynamic product configurations into machine-ready DXF layers and recursive assembly trees with automated cost computation, eliminating manual production errors.
+Fault-Tolerant Agentic AI & Eval-Driven Architecture: Architected a type-safe LLM orchestration layer with automated multi-provider failover (Anthropic, Gemini, OpenAI-compatible endpoints) and tool-execution routing. Built a 2-stage retrieval pipeline (vector similarity search + VoyageAI reranking) validated by 130+ provider contract tests and systematic regression eval datasets to enforce deterministic output schemas.
+Strict Quality Gates & Engineering Rigor: Enforced uncompromising quality gates across 3,400+ automated test cases with a mandatory 80% coverage threshold in CI. Achieved a 91.4% mutation score via mutmut on critical parsing and computational modules under codebase-wide mypy --strict typing standards.
