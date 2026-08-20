@@ -6,11 +6,10 @@
     <title>Michal Nakiewicz - Principal Software Engineer</title>
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #34495e;
+            --primary-color: #1a252f;
+            --secondary-color: #2c3e50;
             --accent-color: #2980b9;
             --text-color: #333;
-            --light-gray: #f8f9fa;
             --border-color: #e9ecef;
         }
 
@@ -40,6 +39,7 @@
             font-size: 2.5rem;
             color: var(--primary-color);
             margin-bottom: 5px;
+            letter-spacing: -0.5px;
         }
 
         .subtitle {
@@ -71,7 +71,7 @@
         }
 
         h2 {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             color: var(--primary-color);
             border-bottom: 1px solid var(--border-color);
             padding-bottom: 5px;
@@ -137,6 +137,9 @@
             font-size: 0.9rem;
             color: #555;
             margin-top: 8px;
+            background-color: #f8f9fa;
+            padding: 8px;
+            border-radius: 4px;
         }
 
         .tech-stack strong {
@@ -167,7 +170,7 @@
 
     <header>
         <h1>Michal Nakiewicz</h1>
-        <div class="subtitle">Principal Software Engineer & AI Architect</div>
+        <div class="subtitle">Principal Software Engineer & Architect</div>
         <div class="contact-info">
             <span>+48 519 687 702</span>
             <span>|</span>
@@ -181,31 +184,27 @@
 
     <section>
         <h2>Professional Summary</h2>
-        <p>Principal Software Engineer and Technical Leader with over 15 years of experience spanning low-level system design (C/C++), enterprise cloud infrastructure, and modern AI-augmented development (Python, TypeScript). Proven track record of architecting solutions at scale—from driving DevOps adoption for 800+ engineers and managing 34,000-core cloud environments, to designing complex modular monoliths. Currently leveraging Agentic AI, LLMs, and rigorous engineering practices (Eval-Driven Development, mutation testing) to accelerate software delivery and architect scalable, production-grade systems.</p>
+        <p>Principal Software Engineer with over 15 years of experience spanning low-level system design (C/C++), enterprise infrastructure (34,000-core OpenStack), and modern AI-augmented backend architecture (Python). Currently operating as a B2B Consultant, architecting high-ROI modular monoliths and multi-agent LLM systems for industrial clients. Recognized for extreme engineering rigor—enforcing strict static typing, mutation testing, and eval-driven development to ensure deterministic reliability in complex, non-deterministic AI workflows.</p>
     </section>
 
     <section>
         <h2>Core Competencies & Skills</h2>
         <div class="skills-grid">
             <div class="skill-category">
-                <strong>Architecture & Engineering</strong>
-                Domain-Driven Design (DDD), Hexagonal Architecture, Modular Monoliths, System Design, Anti-Corruption Layers.
-            </div>
-            <div class="skill-category">
-                <strong>Languages & Frameworks</strong>
-                Python (FastAPI, Pydantic v2, SQLAlchemy), C/C++, TypeScript, SystemC, Reflex.
+                <strong>Architecture & Backend</strong>
+                Python, FastAPI, Pydantic v2, SQLModel, Domain-Driven Design (DDD), Modular Monoliths, <code>uv</code> workspaces.
             </div>
             <div class="skill-category">
                 <strong>AI & LLM Ecosystem</strong>
-                Agentic Workflows, RAG, LlamaIndex, OpenAI/Anthropic/Gemini APIs, Eval-Driven Development, AI-Augmented Dev (Cursor).
-            </div>
-            <div class="skill-category">
-                <strong>Cloud, DevOps & Observability</strong>
-                Docker, Terraform, Ansible, OpenStack, CI/CD, OpenTelemetry, Prometheus, Sentry.
+                Agentic Workflows, RAG, LlamaIndex, VoyageAI, Anthropic/Gemini/Mimo APIs, Eval-Driven Development.
             </div>
             <div class="skill-category">
                 <strong>Quality Assurance & Testing</strong>
-                pytest, Mutation Testing (mutmut), Property-Based Testing (Hypothesis), mypy (strict), Playwright.
+                pytest, Mutation Testing (<code>mutmut</code>), Contract Testing, <code>mypy --strict</code>.
+            </div>
+            <div class="skill-category">
+                <strong>Infrastructure & Low-Level</strong>
+                C/C++, SystemC, Docker, OpenStack, CI/CD, Terraform, Ansible.
             </div>
         </div>
     </section>
@@ -215,25 +214,25 @@
 
         <div class="job">
             <div class="job-header">
-                <div class="job-title">Principal Software Engineer / AI Architect</div>
-                <div class="job-date">2023 – Present</div>
+                <div class="job-title">Principal Software Architect / B2B Consultant</div>
+                <div class="job-date">Jan 2026 – Present</div>
             </div>
-            <div class="job-company">Independent R&D / Tech Lead</div>
+            <div class="job-company">Independent Consulting</div>
             <ul>
-                <li><strong>Architected a Modular Monolith for Manufacturing (ERP/CAM):</strong> Designed a highly cohesive system comprising 6 independent packages connected via a shared domain kernel (<code>uv</code> workspaces). Implemented an Anti-Corruption Layer (ACL) to safely integrate 3D engines (Blender) and automated CNC-ready DXF file generation.</li>
-                <li><strong>Engineered Multi-Provider Agentic Workflows:</strong> Built a multi-agent LLM backend utilizing Hexagonal Architecture to abstract multiple providers (OpenAI, Anthropic, Gemini) behind a unified interface.</li>
-                <li><strong>Pioneered Eval-Driven Development for AI:</strong> Replaced manual LLM testing with automated contract and evaluation testing layers, ensuring deterministic behavior and reliability in non-deterministic agentic workflows.</li>
-                <li><strong>Designed Advanced RAG Pipelines:</strong> Developed end-to-end Retrieval-Augmented Generation systems using LlamaIndex. Implemented chunking, embedding, and advanced reranking (VoyageAI) to optimize retrieval accuracy and manage token costs.</li>
-                <li><strong>Established Enterprise-Grade Engineering Governance:</strong> Enforced strict quality gates across 17 interconnected repositories using mutation testing (<code>mutmut</code>), property-based testing (<code>Hypothesis</code>), and strict static typing. Introduced Architecture Decision Records (ADRs) to track business assumptions.</li>
-                <li><strong>Implemented Full-Stack Observability:</strong> Designed production-ready infrastructure with distributed tracing and error tracking using OpenTelemetry, Prometheus, and Sentry.</li>
+                <li><strong>Architected a Manufacturing ERP/CAM System:</strong> Designed a production-grade modular monolith for a furniture manufacturing client. Built 2 monorepos (11 packages) managed via <code>uv workspace</code>. Modeled the domain using 110+ Pydantic v2/SQLModel classes and exposed 70+ REST endpoints via FastAPI.</li>
+                <li><strong>Built a CNC CAM Engine & BOM Calculator:</strong> Developed an engine generating production-ready DXF files for CNC machines, mapping 8 distinct drilling categories to specific production layers. Designed a recursive Bill of Materials (BOM) engine with cost calculation and product variance handling.</li>
+                <li><strong>Engineered Multi-Provider LLM Abstraction:</strong> Built a multi-agent orchestrator abstracting Anthropic Claude, Google Gemini, and Xiaomi Mimo (via custom base_url) behind a single Protocol interface, enabling seamless model swapping without orchestrator changes.</li>
+                <li><strong>Designed Advanced RAG Pipelines:</strong> Implemented a 2-stage retrieval system (top-10 similarity followed by top-3 VoyageAI reranking) to optimize context windows and improve generation accuracy.</li>
+                <li><strong>Enforced Extreme Engineering Rigor:</strong> Designed and maintained test suites comprising over 3,400 test cases across 12 independent Python repositories with a hard 80% coverage gate. Achieved a 91.4% mutation score (342/374 mutants killed via <code>mutmut</code>) on critical parsing modules.</li>
+                <li><strong>Pioneered Eval-Driven AI Development:</strong> Replaced manual LLM testing with 130+ automated contract tests for the multi-provider orchestrator and documented 11 iterative evaluation runs for dialogue act tagging quality. Maintained strict static typing (<code>mypy --strict</code>) across 120+ core files.</li>
             </ul>
-            <div class="tech-stack"><strong>Tech Stack:</strong> Python, FastAPI, Pydantic v2, Reflex, LLMs (Anthropic, OpenAI, Gemini), LlamaIndex, ChromaDB, OpenTelemetry, uv, pytest, mutmut.</div>
+            <div class="tech-stack"><strong>Tech Stack:</strong> Python, FastAPI, Pydantic v2, SQLModel, Anthropic, Gemini, Xiaomi Mimo, LlamaIndex, VoyageAI, uv, pytest, mutmut, mypy.</div>
         </div>
 
         <div class="job">
             <div class="job-header">
                 <div class="job-title">Technical Leader / Senior Software Engineer</div>
-                <div class="job-date">2017 – 2024</div>
+                <div class="job-date">2017 – Dec 2025</div>
             </div>
             <div class="job-company">Nokia, Poland</div>
             <ul>
