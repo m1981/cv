@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michal Nakiewicz - Principal Software Engineer</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #2980b9;
+            --text-color: #333;
+            --light-gray: #f8f9fa;
+            --border-color: #e9ecef;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 0.95rem;
+            color: var(--secondary-color);
+        }
+
+        .contact-info a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent-color);
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .skill-category strong {
+            display: block;
+            color: var(--secondary-color);
+            margin-bottom: 3px;
+        }
+
+        .job {
+            margin-bottom: 25px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .job-title {
+            font-size: 1.15rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .job-company {
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+
+        .job-date {
+            font-size: 0.95rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        .tech-stack {
+            font-size: 0.9rem;
+            color: #555;
+            margin-top: 8px;
+        }
+
+        .tech-stack strong {
+            color: var(--secondary-color);
+        }
+
+        .education-item {
+            margin-bottom: 10px;
+        }
+
+        /* Print optimizations */
+        @media print {
+            body {
+                padding: 0;
+                max-width: 100%;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            .job {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Michal Nakiewicz</h1>
+        <div class="subtitle">Principal Software Engineer & AI Architect</div>
+        <div class="contact-info">
+            <span>+48 519 687 702</span>
+            <span>|</span>
+            <span><a href="mailto:m.nakiewicz@gmail.com">m.nakiewicz@gmail.com</a></span>
+            <span>|</span>
+            <span><a href="https://github.com/m1981">github.com/m1981</a></span>
+            <span>|</span>
+            <span>Poland</span>
+        </div>
+    </header>
+
+    <section>
+        <h2>Professional Summary</h2>
+        <p>Principal Software Engineer and Technical Leader with over 15 years of experience spanning low-level system design (C/C++), enterprise cloud infrastructure, and modern AI-augmented development (Python, TypeScript). Proven track record of architecting solutions at scale—from driving DevOps adoption for 800+ engineers and managing 34,000-core cloud environments, to designing complex modular monoliths. Currently leveraging Agentic AI, LLMs, and rigorous engineering practices (Eval-Driven Development, mutation testing) to accelerate software delivery and architect scalable, production-grade systems.</p>
+    </section>
+
+    <section>
+        <h2>Core Competencies & Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <strong>Architecture & Engineering</strong>
+                Domain-Driven Design (DDD), Hexagonal Architecture, Modular Monoliths, System Design, Anti-Corruption Layers.
+            </div>
+            <div class="skill-category">
+                <strong>Languages & Frameworks</strong>
+                Python (FastAPI, Pydantic v2, SQLAlchemy), C/C++, TypeScript, SystemC, Reflex.
+            </div>
+            <div class="skill-category">
+                <strong>AI & LLM Ecosystem</strong>
+                Agentic Workflows, RAG, LlamaIndex, OpenAI/Anthropic/Gemini APIs, Eval-Driven Development, AI-Augmented Dev (Cursor).
+            </div>
+            <div class="skill-category">
+                <strong>Cloud, DevOps & Observability</strong>
+                Docker, Terraform, Ansible, OpenStack, CI/CD, OpenTelemetry, Prometheus, Sentry.
+            </div>
+            <div class="skill-category">
+                <strong>Quality Assurance & Testing</strong>
+                pytest, Mutation Testing (mutmut), Property-Based Testing (Hypothesis), mypy (strict), Playwright.
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Professional Experience</h2>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title">Principal Software Engineer / AI Architect</div>
+                <div class="job-date">2023 – Present</div>
+            </div>
+            <div class="job-company">Independent R&D / Tech Lead</div>
+            <ul>
+                <li><strong>Architected a Modular Monolith for Manufacturing (ERP/CAM):</strong> Designed a highly cohesive system comprising 6 independent packages connected via a shared domain kernel (<code>uv</code> workspaces). Implemented an Anti-Corruption Layer (ACL) to safely integrate 3D engines (Blender) and automated CNC-ready DXF file generation.</li>
+                <li><strong>Engineered Multi-Provider Agentic Workflows:</strong> Built a multi-agent LLM backend utilizing Hexagonal Architecture to abstract multiple providers (OpenAI, Anthropic, Gemini) behind a unified interface.</li>
+                <li><strong>Pioneered Eval-Driven Development for AI:</strong> Replaced manual LLM testing with automated contract and evaluation testing layers, ensuring deterministic behavior and reliability in non-deterministic agentic workflows.</li>
+                <li><strong>Designed Advanced RAG Pipelines:</strong> Developed end-to-end Retrieval-Augmented Generation systems using LlamaIndex. Implemented chunking, embedding, and advanced reranking (VoyageAI) to optimize retrieval accuracy and manage token costs.</li>
+                <li><strong>Established Enterprise-Grade Engineering Governance:</strong> Enforced strict quality gates across 17 interconnected repositories using mutation testing (<code>mutmut</code>), property-based testing (<code>Hypothesis</code>), and strict static typing. Introduced Architecture Decision Records (ADRs) to track business assumptions.</li>
+                <li><strong>Implemented Full-Stack Observability:</strong> Designed production-ready infrastructure with distributed tracing and error tracking using OpenTelemetry, Prometheus, and Sentry.</li>
+            </ul>
+            <div class="tech-stack"><strong>Tech Stack:</strong> Python, FastAPI, Pydantic v2, Reflex, LLMs (Anthropic, OpenAI, Gemini), LlamaIndex, ChromaDB, OpenTelemetry, uv, pytest, mutmut.</div>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title">Technical Leader / Senior Software Engineer</div>
+                <div class="job-date">2017 – 2024</div>
+            </div>
+            <div class="job-company">Nokia, Poland</div>
+            <ul>
+                <li><strong>Enterprise-Scale Cloud Migration:</strong> Managed the migration of GitLab pipelines to an OpenStack Cloud environment (34,000 cores), scaling the user base from 60 to 800+ developers while maintaining high performance and reliability.</li>
+                <li><strong>DevOps & Infrastructure Transformation:</strong> Led a massive containerization initiative using Docker, reducing environment setup time from 3 days to 15 minutes and standardizing practices across 200+ developers.</li>
+                <li><strong>Technical Leadership & Quality Gates:</strong> Managed a cross-functional team of 8 engineers supporting 5G development. Designed and implemented rigorous quality gate frameworks for a massive C++ codebase exceeding 600,000 lines of code.</li>
+                <li><strong>AI Enablement:</strong> Designed and delivered workshops on prompt engineering and AI integration, coaching engineers on adopting AI-assisted development practices and agentic workflows.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title">Leading Software Design Engineer</div>
+                <div class="job-date">2011 – 2017</div>
+            </div>
+            <div class="job-company">Imagination Technologies, UK</div>
+            <ul>
+                <li>Developed SystemC-based software simulators for H.264/AVC and H.264 lossless video decoding standards.</li>
+                <li>Built cycle-accurate hardware models to validate decoder architecture before silicon fabrication, contributing directly to IP licensed to major global technology clients.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title">Software Development Specialist</div>
+                <div class="job-date">2007 – 2011</div>
+            </div>
+            <div class="job-company">Nokia Siemens Networks, Poland</div>
+            <ul>
+                <li>Co-designed and implemented an MPLS packet classifier module for carrier-grade Ethernet switches operating in a Real-Time Operating System (RTOS).</li>
+                <li>Collaborated within multinational engineering teams across five countries in a highly distributed environment.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <div class="education-item">
+            <strong>MSc Computer Science</strong> — Poznan University of Technology (2004 – 2006)
+        </div>
+        <div class="education-item">
+            <strong>BSc IT in Business</strong> — Bydgoszcz University of Business (2001 – 2004)
+        </div>
+    </section>
+
+    <section>
+        <h2>Languages</h2>
+        <p><strong>Polish:</strong> Native | <strong>English:</strong> Professional Working Proficiency</p>
+    </section>
+
+</body>
+</html>
