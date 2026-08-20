@@ -14,3 +14,11 @@ Domain-Driven Modular Architecture: Architected a production Modular Monolith fo
 Algorithmic CAM Engine & Recursive BOM: Designed and built a deterministic CNC CAM engine and recursive BOM processor. Automated the translation of dynamic product configurations into machine-ready DXF layers and recursive assembly trees with automated cost computation, eliminating manual production errors.
 Fault-Tolerant Agentic AI & Eval-Driven Architecture: Architected a type-safe LLM orchestration layer with automated multi-provider failover (Anthropic, Gemini, OpenAI-compatible endpoints) and tool-execution routing. Built a 2-stage retrieval pipeline (vector similarity search + VoyageAI reranking) validated by 130+ provider contract tests and systematic regression eval datasets to enforce deterministic output schemas.
 Strict Quality Gates & Engineering Rigor: Enforced uncompromising quality gates across 3,400+ automated test cases with a mandatory 80% coverage threshold in CI. Achieved a 91.4% mutation score via mutmut on critical parsing and computational modules under codebase-wide mypy --strict typing standards.
+
+
+Technical Leader / Senior Software Engineer
+Nokia, Poland | 2017 – Dec 2025
+Hyperscale Cloud Infrastructure & Migration: Spearheaded the architectural migration of mission-critical GitLab CI/CD pipelines to a massive OpenStack Cloud environment (34,000 cores). Successfully scaled the platform to support 800+ concurrent developers while maintaining strict performance SLAs and zero-downtime reliability.
+Enterprise DevOps Transformation: Architected and led a large-scale containerization initiative using Docker across a diverse engineering organization. Standardized development environments for 200+ engineers, drastically reducing environment provisioning time from 3 days to 15 minutes.
+C++ Codebase Governance & Quality Gates: Acted as a technical authority for a cross-functional 5G development team. Designed and enforced rigorous quality gate frameworks and static analysis pipelines for a legacy, high-performance C++ codebase exceeding 600,000 lines of code.
+AI Enablement & Engineering Culture: Drove the early adoption of AI-augmented development within the organization. Designed reference workflows and coached engineering teams on integrating LLMs, prompt engineering, and agentic tools into daily software development lifecycles.
