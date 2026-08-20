@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michal Nakiewicz - Principal Software Engineer</title>
+    <style>
+        :root {
+            --primary-color: #1a252f;
+            --secondary-color: #2c3e50;
+            --accent-color: #2980b9;
+            --text-color: #333;
+            --border-color: #e9ecef;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .tagline {
+            font-size: 1rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 0.95rem;
+            color: var(--secondary-color);
+        }
+
+        .contact-info a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent-color);
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .skill-category strong {
+            display: block;
+            color: var(--secondary-color);
+            margin-bottom: 3px;
+        }
+
+        .job {
+            margin-bottom: 25px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .job-title {
+            font-size: 1.15rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .job-company {
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+
+        .job-date {
+            font-size: 0.95rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        .tech-stack {
+            font-size: 0.9rem;
+            color: #555;
+            margin-top: 8px;
+            background-color: #f8f9fa;
+            padding: 8px;
+            border-radius: 4px;
+        }
+
+        .tech-stack strong {
+            color: var(--secondary-color);
+        }
+
+        .education-item {
+            margin-bottom: 10px;
+        }
+
+        /* Print optimizations */
+        @media print {
+            body {
+                padding: 0;
+                max-width: 100%;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            .job {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Michal Nakiewicz</h1>
+        <div class="subtitle">Principal Software Engineer | Systems & AI Architect</div>
+        <div class="tagline">Mission-Critical Architecture • AI Reliability & Eval-Driven Systems • High-Rigor Backend</div>
+        <div class="contact-info">
+            <span>+48 519 687 702</span>
+            <span>|</span>
+            <span><a href="mailto:m.nakiewicz@gmail.com">m.nakiewicz@gmail.com</a></span>
+            <span>|</span>
+            <span><a href="https://github.com/m1981">github.com/m1981</a></span>
+            <span>|</span>
+            <span>Poland</span>
+        </div>
+    </header>
+
+    <section>
+        <h2>Professional Summary</h2>
+        <p>Hands-on Principal Software Engineer with 19 years of deep engineering experience spanning low-level systems (C/C++, RTOS), hyperscale enterprise platform infrastructure (34,000-core OpenStack), and modern deterministic AI/Backend architectures (Python). Specializes in architecting mission-critical, high-rigor systems using Domain-Driven Design (Modular Monoliths) and production-grade Agentic AI pipelines. Known for an uncompromising approach to software correctness—leveraging strict typing, mutation testing, and eval-driven validation to bring deterministic reliability to complex, non-deterministic LLM workflows. Operates purely on the Individual Contributor (IC) track, leading by reference implementations, architectural prototypes, and engineering excellence.</p>
+    </section>
+
+    <section>
+        <h2>Core Competencies & Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <strong>Architecture & Backend</strong>
+                Python, FastAPI, Pydantic v2, SQLModel, Domain-Driven Design (DDD), Modular Monoliths.
+            </div>
+            <div class="skill-category">
+                <strong>AI & LLM Ecosystem</strong>
+                Agentic Workflows, RAG, LlamaIndex, VoyageAI, Anthropic/Gemini/OpenAI-compatible APIs, Eval-Driven Dev.
+            </div>
+            <div class="skill-category">
+                <strong>Quality Assurance & Observability</strong>
+                pytest, Mutation Testing (mutmut), Contract Testing, Static Typing (mypy), OpenTelemetry, Sentry.
+            </div>
+            <div class="skill-category">
+                <strong>Infrastructure & Low-Level</strong>
+                C/C++, SystemC, Docker, OpenStack, CI/CD, Terraform, Ansible, RTOS.
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Experience</h2>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title">Principal Software Architect & Core Engineer</div>
+                <div class="job-date">Jan 2026 – Present</div>
+            </div>
+            <div class="job-company">Independent Consulting | DeepTech & Industrial AI</div>
+            <ul>
+                <li><strong>Domain-Driven Modular Architecture:</strong> Architected a production Modular Monolith for an industrial manufacturing platform using Domain-Driven Design (DDD). Engineered a shared domain kernel and Anti-Corruption Layer (ACL) across isolated packages managed via <code>uv workspace</code>, eliminating microservice operational overhead while guaranteeing strict boundary isolation.</li>
+                <li><strong>Algorithmic CAM Engine & Recursive BOM:</strong> Designed and built a deterministic CNC CAM engine and recursive BOM processor. Automated the translation of dynamic product configurations into machine-ready DXF layers and recursive assembly trees with automated cost computation, eliminating manual production errors.</li>
+                <li><strong>Fault-Tolerant Agentic AI & Eval-Driven Architecture:</strong> Architected a type-safe LLM orchestration layer with automated multi-provider failover (Anthropic, Gemini, OpenAI-compatible endpoints) and tool-execution routing. Built a 2-stage retrieval pipeline (vector similarity search + VoyageAI reranking) validated by 130+ provider contract tests and systematic regression eval datasets to enforce deterministic output schemas.</li>
+                <li><strong>Strict Quality Gates & Engineering Rigor:</strong> Enforced uncompromising quality gates across 3,400+ automated test cases with a mandatory 80% coverage threshold in CI. Achieved a 91.4% mutation score via <code>mutmut</code> on critical parsing and computational modules under codebase-wide <code>mypy --strict</code> typing standards.</li>
+            </ul>
+            <div class="tech-stack"><strong>Tech Stack:</strong> Python, FastAPI, Pydantic v2, SQLModel, Anthropic, Gemini, LlamaIndex, VoyageAI, uv, pytest, mutmut, mypy, OpenTelemetry.</div>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title">Technical Leader / Senior Software Engineer</div>
+                <div class="job-date">2017 – Dec 2025</div>
+            </div>
+            <div class="job-company">Nokia, Poland</div>
+            <ul>
+                <li><strong>Hyperscale Cloud Infrastructure & Migration:</strong> Spearheaded the architectural migration of mission-critical GitLab CI/CD pipelines to a massive OpenStack Cloud environment (34,000 cores). Successfully scaled the platform to support 800+ concurrent developers while maintaining strict performance SLAs and zero-downtime reliability.</li>
+                <li><strong>Enterprise DevOps Transformation:</strong> Architected and led a large-scale containerization initiative using Docker across a diverse engineering organization. Standardized development environments for 200+ engineers, drastically reducing environment provisioning time from 3 days to 15 minutes.</li>
+                <li><strong>C++ Codebase Governance & Quality Gates:</strong> Acted as a technical authority for a cross-functional 5G development team. Designed and enforced rigorous quality gate frameworks and static analysis pipelines for a legacy, high-performance C++ codebase exceeding 600,000 lines of code.</li>
+                <li><strong>AI Enablement & Engineering Culture:</strong> Drove the early adoption of AI-augmented development within the organization. Designed reference workflows and coached engineering teams on integrating LLMs, prompt engineering, and agentic tools into daily software development lifecycles.</li>
+            </ul>
+            <div class="tech-stack"><strong>Tech Stack:</strong> OpenStack, Docker, C++, GitLab CI/CD, Linux, LLMs.</div>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title">Leading Software Design Engineer</div>
+                <div class="job-date">2011 – 2017</div>
+            </div>
+            <div class="job-company">Imagination Technologies, UK</div>
+            <ul>
+                <li><strong>Hardware Simulation & Validation:</strong> Developed highly optimized, SystemC-based software simulators for H.264/AVC and H.264 lossless video decoding standards.</li>
+                <li><strong>Silicon-Level Architecture:</strong> Built cycle-accurate hardware models used to validate complex decoder architectures prior to silicon fabrication. Contributed directly to core IP licensed to major global technology clients.</li>
+            </ul>
+            <div class="tech-stack"><strong>Tech Stack:</strong> C++, SystemC, Hardware Simulation.</div>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title">Software Development Specialist</div>
+                <div class="job-date">2007 – 2011</div>
+            </div>
+            <div class="job-company">Nokia Siemens Networks, Poland</div>
+            <ul>
+                <li><strong>RTOS & Low-Level Networking:</strong> Co-designed and implemented a high-performance MPLS packet classifier module for carrier-grade Ethernet switches operating within a strict Real-Time Operating System (RTOS) environment.</li>
+                <li><strong>Distributed Engineering:</strong> Collaborated within multinational engineering teams across five countries, delivering mission-critical telecommunications infrastructure.</li>
+            </ul>
+            <div class="tech-stack"><strong>Tech Stack:</strong> C/C++, RTOS, Embedded Systems, Networking (MPLS).</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <div class="education-item">
+            <strong>MSc Computer Science</strong> — Poznan University of Technology (2004 – 2006)
+        </div>
+        <div class="education-item">
+            <strong>BSc IT in Business</strong> — Bydgoszcz University of Business (2001 – 2004)
+        </div>
+    </section>
+
+    <section>
+        <h2>Languages</h2>
+        <p><strong>Polish:</strong> Native | <strong>English:</strong> Professional Working Proficiency</p>
+    </section>
+
+</body>
+</html>
