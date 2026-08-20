@@ -184,7 +184,7 @@
 
     <section>
         <h2>Professional Summary</h2>
-        <p>Principal Software Engineer with over 15 years of experience spanning low-level system design (C/C++), enterprise infrastructure (34,000-core OpenStack), and modern AI-augmented backend architecture (Python). Currently operating as a B2B Consultant, architecting high-ROI modular monoliths and multi-agent LLM systems for industrial clients. Recognized for extreme engineering rigor—enforcing strict static typing, mutation testing, and eval-driven development to ensure deterministic reliability in complex, non-deterministic AI workflows.</p>
+        <p>Principal Software Engineer with over 15 years of experience spanning low-level system design (C/C++), enterprise infrastructure (34,000-core OpenStack), and modern AI-augmented backend architecture (Python). Currently operating as a B2B Consultant, architecting high-ROI modular monoliths and multi-agent LLM systems for industrial clients. Recognized for uncompromising engineering rigor—enforcing strict static typing, mutation testing, and eval-driven development to ensure deterministic reliability in complex, non-deterministic AI workflows.</p>
     </section>
 
     <section>
@@ -192,15 +192,15 @@
         <div class="skills-grid">
             <div class="skill-category">
                 <strong>Architecture & Backend</strong>
-                Python, FastAPI, Pydantic v2, SQLModel, Domain-Driven Design (DDD), Modular Monoliths, <code>uv</code> workspaces.
+                Python, FastAPI, Pydantic v2, SQLModel, Domain-Driven Design (DDD), Modular Monoliths.
             </div>
             <div class="skill-category">
                 <strong>AI & LLM Ecosystem</strong>
-                Agentic Workflows, RAG, LlamaIndex, VoyageAI, Anthropic/Gemini/Mimo APIs, Eval-Driven Development.
+                Agentic Workflows, RAG, LlamaIndex, VoyageAI, Anthropic/Gemini/OpenAI-compatible APIs, Eval-Driven Dev.
             </div>
             <div class="skill-category">
-                <strong>Quality Assurance & Testing</strong>
-                pytest, Mutation Testing (<code>mutmut</code>), Contract Testing, <code>mypy --strict</code>.
+                <strong>Quality Assurance & Observability</strong>
+                pytest, Mutation Testing (mutmut), Contract Testing, mypy --strict, OpenTelemetry, Sentry.
             </div>
             <div class="skill-category">
                 <strong>Infrastructure & Low-Level</strong>
@@ -219,11 +219,11 @@
             </div>
             <div class="job-company">Independent Consulting</div>
             <ul>
-                <li><strong>Architected a Manufacturing ERP/CAM System:</strong> Designed a production-grade modular monolith for a furniture manufacturing client. Built 2 monorepos (11 packages) managed via <code>uv workspace</code>. Modeled the domain using 110+ Pydantic v2/SQLModel classes and exposed 70+ REST endpoints via FastAPI.</li>
+                <li><strong>Architected a Manufacturing ERP/CAM System:</strong> Led the design and implementation of a production-grade modular monolith for a furniture manufacturing client. Built an ecosystem of 11 packages managed via <code>uv workspace</code>. Modeled the domain using 110+ Pydantic v2/SQLModel classes and exposed 70+ REST endpoints via FastAPI.</li>
                 <li><strong>Built a CNC CAM Engine & BOM Calculator:</strong> Developed an engine generating production-ready DXF files for CNC machines, mapping 8 distinct drilling categories to specific production layers. Designed a recursive Bill of Materials (BOM) engine with cost calculation and product variance handling.</li>
-                <li><strong>Engineered Multi-Provider LLM Abstraction:</strong> Built a multi-agent orchestrator abstracting Anthropic Claude, Google Gemini, and Xiaomi Mimo (via custom base_url) behind a single Protocol interface, enabling seamless model swapping without orchestrator changes.</li>
+                <li><strong>Engineered Multi-Provider LLM Abstraction:</strong> Built a multi-agent orchestrator abstracting Anthropic Claude, Google Gemini, and Xiaomi Mimo (via custom base_url) behind a single Protocol interface, enabling seamless model swapping.</li>
                 <li><strong>Designed Advanced RAG Pipelines:</strong> Implemented a 2-stage retrieval system (top-10 similarity followed by top-3 VoyageAI reranking) to optimize context windows and improve generation accuracy.</li>
-                <li><strong>Enforced Extreme Engineering Rigor:</strong> Designed and maintained test suites comprising over 3,400 test cases across 12 independent Python repositories with a hard 80% coverage gate. Achieved a 91.4% mutation score (342/374 mutants killed via <code>mutmut</code>) on critical parsing modules.</li>
+                <li><strong>Enforced Uncompromising Engineering Rigor:</strong> Designed and maintained test suites comprising over 3,400 test cases across the 12-repository ecosystem with a hard 80% coverage gate. Achieved a 91.4% mutation score (342/374 mutants killed via <code>mutmut</code>) on critical parsing modules.</li>
                 <li><strong>Pioneered Eval-Driven AI Development:</strong> Replaced manual LLM testing with 130+ automated contract tests for the multi-provider orchestrator and documented 11 iterative evaluation runs for dialogue act tagging quality. Maintained strict static typing (<code>mypy --strict</code>) across 120+ core files.</li>
             </ul>
             <div class="tech-stack"><strong>Tech Stack:</strong> Python, FastAPI, Pydantic v2, SQLModel, Anthropic, Gemini, Xiaomi Mimo, LlamaIndex, VoyageAI, uv, pytest, mutmut, mypy.</div>
