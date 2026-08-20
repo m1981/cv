@@ -21,7 +21,7 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
+            line-height: 1.5; /* Zmniejszone z 1.6 dla lepszego upakowania */
             color: var(--text-color);
             background-color: #fff;
             max-width: 850px;
@@ -31,12 +31,12 @@
 
         header {
             border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 20px;
-            margin-bottom: 25px;
+            padding-bottom: 15px; /* Zmniejszone */
+            margin-bottom: 20px; /* Zmniejszone */
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.4rem;
             color: var(--primary-color);
             margin-bottom: 5px;
             letter-spacing: -0.5px;
@@ -53,7 +53,7 @@
             font-size: 1rem;
             color: var(--accent-color);
             font-weight: 600;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .contact-info {
@@ -74,7 +74,7 @@
         }
 
         section {
-            margin-bottom: 30px;
+            margin-bottom: 20px; /* Zmniejszone z 30px, żeby zyskać miejsce w pionie */
         }
 
         h2 {
@@ -82,9 +82,13 @@
             color: var(--primary-color);
             border-bottom: 1px solid var(--border-color);
             padding-bottom: 5px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             text-transform: uppercase;
             letter-spacing: 1px;
+
+            /* Zabezpieczenie przed zostawieniem samego nagłówka na dole strony */
+            page-break-after: avoid;
+            break-after: avoid;
         }
 
         p {
@@ -104,7 +108,10 @@
         }
 
         .job {
-            margin-bottom: 25px;
+            margin-bottom: 20px;
+            /* Zabezpieczenie przed ucięciem pracy w połowie (jeśli to możliwe) */
+            page-break-inside: avoid;
+            break-inside: avoid;
         }
 
         .job-header {
@@ -137,7 +144,7 @@
         }
 
         li {
-            margin-bottom: 6px;
+            margin-bottom: 4px; /* Zmniejszone z 6px */
         }
 
         .tech-stack {
@@ -145,7 +152,7 @@
             color: #555;
             margin-top: 8px;
             background-color: #f8f9fa;
-            padding: 8px;
+            padding: 6px 8px;
             border-radius: 4px;
         }
 
@@ -154,21 +161,32 @@
         }
 
         .education-item {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         /* Print optimizations */
         @media print {
+            /* Ustawienie fizycznych marginesów kartki A4 (Większy lewy margines) */
+            @page {
+                margin: 12mm 12mm 12mm 25mm; /* Góra, Prawa, Dół, Lewa */
+            }
+
             body {
                 padding: 0;
                 max-width: 100%;
+                font-size: 0.95rem; /* Minimalne zmniejszenie fontu do druku */
             }
+
             a {
                 text-decoration: none;
                 color: black;
             }
-            .job {
-                page-break-inside: avoid;
+
+            /* Wymuszenie tła dla tech-stack w druku (niektóre przeglądarki to usuwają) */
+            .tech-stack {
+                background-color: #f8f9fa !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
             }
         }
     </style>
