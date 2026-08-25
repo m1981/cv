@@ -21,7 +21,7 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.5; /* Zmniejszone z 1.6 dla lepszego upakowania */
+            line-height: 1.5;
             color: var(--text-color);
             background-color: #fff;
             max-width: 850px;
@@ -31,8 +31,8 @@
 
         header {
             border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 15px; /* Zmniejszone */
-            margin-bottom: 20px; /* Zmniejszone */
+            padding-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         h1 {
@@ -74,7 +74,7 @@
         }
 
         section {
-            margin-bottom: 20px; /* Zmniejszone z 30px, żeby zyskać miejsce w pionie */
+            margin-bottom: 20px;
         }
 
         h2 {
@@ -86,7 +86,7 @@
             text-transform: uppercase;
             letter-spacing: 1px;
 
-            /* Zabezpieczenie przed zostawieniem samego nagłówka na dole strony */
+            /* Zabezpieczenie nagłówka sekcji */
             page-break-after: avoid;
             break-after: avoid;
         }
@@ -109,9 +109,7 @@
 
         .job {
             margin-bottom: 20px;
-            /* Zabezpieczenie przed ucięciem pracy w połowie (jeśli to możliwe) */
-            page-break-inside: avoid;
-            break-inside: avoid;
+            /* USUNIĘTO page-break-inside: avoid; aby długa praca mogła się przełamać na 2 strony */
         }
 
         .job-header {
@@ -119,17 +117,17 @@
             justify-content: space-between;
             align-items: baseline;
             margin-bottom: 5px;
-        }
-
-        .job-title {
-            font-size: 1.15rem;
-            font-weight: bold;
-            color: var(--primary-color);
+            /* Trzymaj tytuł pracy razem z nazwą firmy */
+            page-break-after: avoid;
+            break-after: avoid;
         }
 
         .job-company {
             font-weight: 600;
             color: var(--secondary-color);
+            /* Trzymaj nazwę firmy razem z pierwszymi bulletami */
+            page-break-after: avoid;
+            break-after: avoid;
         }
 
         .job-date {
@@ -144,7 +142,10 @@
         }
 
         li {
-            margin-bottom: 4px; /* Zmniejszone z 6px */
+            margin-bottom: 4px;
+            /* Zabezpiecz pojedynczy bullet przed pęknięciem w połowie linijki */
+            page-break-inside: avoid;
+            break-inside: avoid;
         }
 
         .tech-stack {
@@ -154,6 +155,8 @@
             background-color: #f8f9fa;
             padding: 6px 8px;
             border-radius: 4px;
+            page-break-inside: avoid;
+            break-inside: avoid;
         }
 
         .tech-stack strong {
@@ -162,11 +165,12 @@
 
         .education-item {
             margin-bottom: 8px;
+            page-break-inside: avoid;
+            break-inside: avoid;
         }
 
         /* Print optimizations */
         @media print {
-            /* Ustawienie fizycznych marginesów kartki A4 (Większy lewy margines) */
             @page {
                 margin: 12mm 12mm 12mm 25mm; /* Góra, Prawa, Dół, Lewa */
             }
@@ -174,7 +178,7 @@
             body {
                 padding: 0;
                 max-width: 100%;
-                font-size: 0.95rem; /* Minimalne zmniejszenie fontu do druku */
+                font-size: 0.95rem;
             }
 
             a {
@@ -182,7 +186,6 @@
                 color: black;
             }
 
-            /* Wymuszenie tła dla tech-stack w druku (niektóre przeglądarki to usuwają) */
             .tech-stack {
                 background-color: #f8f9fa !important;
                 -webkit-print-color-adjust: exact;
