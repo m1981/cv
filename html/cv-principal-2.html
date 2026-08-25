@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michal Nakiewicz - Principal Software Engineer</title>
+    <title>Michal Nakiewicz - Senior AI Engineer</title>
     <style>
         :root {
             --primary-color: #1a252f;
@@ -21,7 +21,7 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.5;
+            line-height: 1.45; /* Delikatnie ciaśniejsza interlinia */
             color: var(--text-color);
             background-color: #fff;
             max-width: 850px;
@@ -31,14 +31,14 @@
 
         header {
             border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 15px;
-            margin-bottom: 20px;
+            padding-bottom: 12px;
+            margin-bottom: 15px;
         }
 
         h1 {
             font-size: 2.4rem;
             color: var(--primary-color);
-            margin-bottom: 5px;
+            margin-bottom: 2px;
             letter-spacing: -0.5px;
         }
 
@@ -46,22 +46,23 @@
             font-size: 1.2rem;
             color: var(--primary-color);
             font-weight: 700;
-            margin-bottom: 5px;
+            margin-bottom: 2px;
         }
 
         .tagline {
             font-size: 1rem;
             color: var(--accent-color);
             font-weight: 600;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .contact-info {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 12px;
             font-size: 0.95rem;
             color: var(--secondary-color);
+            align-items: center;
         }
 
         .contact-info a {
@@ -74,50 +75,46 @@
         }
 
         section {
-            margin-bottom: 20px;
+            margin-bottom: 15px; /* Zmniejszono z 20px */
         }
 
         h2 {
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             color: var(--primary-color);
             border-bottom: 1px solid var(--border-color);
-            padding-bottom: 5px;
-            margin-bottom: 12px;
+            padding-bottom: 4px;
+            margin-bottom: 10px; /* Zmniejszono z 12px */
             text-transform: uppercase;
             letter-spacing: 1px;
-
-            /* Zabezpieczenie nagłówka sekcji */
             page-break-after: avoid;
             break-after: avoid;
         }
 
         p {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .skills-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 15px;
+            gap: 12px;
         }
 
         .skill-category strong {
             display: block;
             color: var(--secondary-color);
-            margin-bottom: 3px;
+            margin-bottom: 2px;
         }
 
         .job {
-            margin-bottom: 20px;
-            /* USUNIĘTO page-break-inside: avoid; aby długa praca mogła się przełamać na 2 strony */
+            margin-bottom: 15px; /* Zmniejszono z 20px */
         }
 
         .job-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 5px;
-            /* Trzymaj tytuł pracy razem z nazwą firmy */
+            margin-bottom: 2px;
             page-break-after: avoid;
             break-after: avoid;
         }
@@ -125,7 +122,7 @@
         .job-company {
             font-weight: 600;
             color: var(--secondary-color);
-            /* Trzymaj nazwę firmy razem z pierwszymi bulletami */
+            margin-bottom: 4px;
             page-break-after: avoid;
             break-after: avoid;
         }
@@ -138,33 +135,37 @@
 
         ul {
             margin-left: 20px;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         li {
             margin-bottom: 4px;
-            /* Zabezpiecz pojedynczy bullet przed pęknięciem w połowie linijki */
             page-break-inside: avoid;
             break-inside: avoid;
         }
 
-        .tech-stack {
+        /* Dodana brakująca klasa! */
+        .tech-stack-inline {
             font-size: 0.9rem;
             color: #555;
-            margin-top: 8px;
-            background-color: #f8f9fa;
-            padding: 6px 8px;
-            border-radius: 4px;
+            margin-top: 4px;
+            margin-bottom: 8px;
             page-break-inside: avoid;
             break-inside: avoid;
         }
 
-        .tech-stack strong {
+        .tech-stack-inline strong {
             color: var(--secondary-color);
         }
 
+        .job-simple {
+            margin-bottom: 6px;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
         .education-item {
-            margin-bottom: 8px;
+            margin-bottom: 4px;
             page-break-inside: avoid;
             break-inside: avoid;
         }
@@ -172,7 +173,8 @@
         /* Print optimizations */
         @media print {
             @page {
-                margin: 12mm 12mm 12mm 25mm; /* Góra, Prawa, Dół, Lewa */
+                /* Zmniejszono marginesy góra/dół do 10mm, żeby zyskać miejsce */
+                margin: 10mm 15mm 10mm 20mm;
             }
 
             body {
@@ -185,12 +187,6 @@
                 text-decoration: none;
                 color: black;
             }
-
-            .tech-stack {
-                background-color: #f8f9fa !important;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
         }
     </style>
 </head>
@@ -198,8 +194,8 @@
 
     <header>
         <h1>Michal Nakiewicz</h1>
-        <div class="subtitle">Principal Software Engineer | Systems & AI Architect</div>
-        <div class="tagline">Mission-Critical Architecture • AI Reliability & Eval-Driven Systems • High-Rigor Backend</div>
+        <div class="subtitle">Senior AI Engineer & Tech Lead</div>
+        <div class="tagline">Production-Grade AI Systems • Eval-Driven LLM Workflows • High-Rigor Backend</div>
         <div class="contact-info">
             <span>+48 519 687 702</span>
             <span>|</span>
@@ -208,12 +204,14 @@
             <span><a href="https://github.com/m1981">github.com/m1981</a></span>
             <span>|</span>
             <span>Poland</span>
+            <span>|</span>
+            <strong>Availability: 2 weeks notice</strong>
         </div>
     </header>
 
     <section>
         <h2>Professional Summary</h2>
-        <p>Hands-on Principal Software Engineer with 19 years of deep engineering experience spanning low-level systems (C/C++, RTOS), hyperscale enterprise platform infrastructure (34,000-core OpenStack), and modern deterministic AI/Backend architectures (Python). Specializes in architecting mission-critical, high-rigor systems using Domain-Driven Design (Modular Monoliths) and production-grade Agentic AI pipelines. Known for an uncompromising approach to software correctness—leveraging strict typing, mutation testing, and eval-driven validation to bring deterministic reliability to complex, non-deterministic LLM workflows. Operates purely on the Individual Contributor (IC) track, leading by reference implementations, architectural prototypes, and engineering excellence.</p>
+        <p>Hands-on Senior AI Engineer & Tech Lead with 19 years of experience spanning hyperscale infrastructure and deterministic AI architectures. Specializes in delivering mission-critical systems and productizing LLM prototypes into reliable Agentic AI pipelines for highly regulated domains (e.g., Telecom, Healthcare). Known for a rigorous approach to software correctness (strict typing, mutation testing, eval-driven validation). Dedicated to leading by example and driving engineering excellence.</p>
     </section>
 
     <section>
@@ -221,19 +219,19 @@
         <div class="skills-grid">
             <div class="skill-category">
                 <strong>Architecture & Backend</strong>
-                Python, FastAPI, Pydantic v2, SQLModel, Domain-Driven Design (DDD), Modular Monoliths.
+                Python, FastAPI, Pydantic v2, PostgreSQL / SQLModel / SQLAlchemy, Domain-Driven Design (DDD), Modular Monoliths.
             </div>
             <div class="skill-category">
                 <strong>AI & LLM Ecosystem</strong>
-                Agentic Workflows, RAG, LlamaIndex, VoyageAI, Anthropic/Gemini/OpenAI-compatible APIs, Eval-Driven Dev.
+                Agentic Workflows, RAG, LangChain, LangGraph, LlamaIndex, Vector Databases (pgvector, ChromaDB), VoyageAI, Open-Source LLMs (Llama, Mistral), Anthropic/OpenAI APIs, Eval-Driven Dev.
             </div>
             <div class="skill-category">
                 <strong>Quality Assurance & Observability</strong>
                 pytest, Mutation Testing (mutmut), Contract Testing, Static Typing (mypy), OpenTelemetry, Sentry.
             </div>
             <div class="skill-category">
-                <strong>Infrastructure & Low-Level</strong>
-                C/C++, SystemC, Docker, OpenStack, CI/CD, Terraform, Ansible, RTOS.
+    <strong>Cloud & Infrastructure</strong>
+    Docker, OpenStack, CI/CD, Terraform, Ansible, Linux.
             </div>
         </div>
     </section>
@@ -243,74 +241,54 @@
 
         <div class="job">
             <div class="job-header">
-                <div class="job-title">Principal Software Architect & Core Engineer</div>
+                <div class="job-title">Senior AI Engineer & Tech Lead</div>
                 <div class="job-date">Jan 2026 – Present</div>
             </div>
-            <div class="job-company">Independent Consulting | DeepTech & Industrial AI</div>
+            <div class="job-company">Independent Consulting | Mission-Critical AI & Enterprise Systems</div>
             <ul>
-                <li><strong>Domain-Driven Modular Architecture:</strong> Architected a production Modular Monolith for an industrial manufacturing platform using Domain-Driven Design (DDD). Engineered a shared domain kernel and Anti-Corruption Layer (ACL) across isolated packages managed via <code>uv workspace</code>, eliminating microservice operational overhead while guaranteeing strict boundary isolation.</li>
-                <li><strong>Algorithmic CAM Engine & Recursive BOM:</strong> Designed and built a deterministic CNC CAM engine and recursive BOM processor. Automated the translation of dynamic product configurations into machine-ready DXF layers and recursive assembly trees with automated cost computation, eliminating manual production errors.</li>
-                <li><strong>Fault-Tolerant Agentic AI & Eval-Driven Architecture:</strong> Architected a type-safe LLM orchestration layer with automated multi-provider failover (Anthropic, Gemini, OpenAI-compatible endpoints) and tool-execution routing. Built a 2-stage retrieval pipeline (vector similarity search + VoyageAI reranking) validated by 130+ provider contract tests and systematic regression eval datasets to enforce deterministic output schemas.</li>
-                <li><strong>Strict Quality Gates & Engineering Rigor:</strong> Enforced uncompromising quality gates across 3,400+ automated test cases with a mandatory 80% coverage threshold in CI. Achieved a 91.4% mutation score via <code>mutmut</code> on critical parsing and computational modules under codebase-wide <code>mypy --strict</code> typing standards.</li>
+                <li><strong>Fault-Tolerant Agentic AI & Eval-Driven Architecture:</strong> Designed and implemented a type-safe LLM orchestration layer using <strong>LangGraph and custom agentic workflows</strong> with automated multi-provider failover (Anthropic, OpenAI, <strong>Open-Source local models</strong>) and tool-execution routing.</li>
+                <li><strong>Production RAG Pipelines:</strong> Built an end-to-end 2-stage RAG pipeline (<strong>pgvector</strong>, ChromaDB, VoyageAI reranking) validated by 130+ contract tests and regression eval datasets to enforce deterministic outputs.</li>
+                <li><strong>Domain-Driven Modular Architecture:</strong> Architected a <strong>PostgreSQL</strong>-backed Modular Monolith using Domain-Driven Design (DDD). Engineered a shared domain kernel and Anti-Corruption Layer (ACL) to guarantee strict boundary isolation without microservice overhead.</li>
+<li><strong>Complex Algorithmic Processing:</strong>Built a deterministic processing engine with recursive data structures, automating the translation of dynamic configurations into structured outputs to optimize computational costs.</li>
+                <li><strong>Strict Quality Gates & Engineering Rigor:</strong> Enforced strict quality gates (3,400+ tests, 80% CI coverage). Achieved a 91.4% mutation score (<code>mutmut</code>) on critical modules under codebase-wide <code>mypy --strict</code> standards.</li>
             </ul>
-            <div class="tech-stack"><strong>Tech Stack:</strong> Python, FastAPI, Pydantic v2, SQLModel, Anthropic, Gemini, LlamaIndex, VoyageAI, uv, pytest, mutmut, mypy, OpenTelemetry.</div>
+            <p class="tech-stack-inline"><strong>Tech Stack:</strong> Python, FastAPI, Pydantic v2, PostgreSQL, SQLModel, LangGraph, LangChain, LlamaIndex, pgvector, OpenAI, VoyageAI, pytest, mutmut, mypy, OpenTelemetry.</p>
         </div>
 
         <div class="job">
             <div class="job-header">
-                <div class="job-title">Staff Platform Engineer & Technical Lead</div>
+                <div class="job-title">Senior Software Engineer & Technical Lead</div>
                 <div class="job-date">2017 – Dec 2025</div>
             </div>
             <div class="job-company">Nokia, Poland</div>
             <ul>
-                <li><strong>Hyperscale Cloud & Platform Migration:</strong> Spearheaded the architectural migration of mission-critical GitLab CI/CD pipelines to a massive OpenStack Cloud environment (34,000 cores). Scaled the platform to support 800+ concurrent developers while ensuring high throughput, system resilience, and deterministic build environments.</li>
-                <li><strong>Enterprise DevOps & DevEx Transformation:</strong> Architected and led a large-scale containerization initiative using Docker across a diverse engineering organization. Standardized development environments for 200+ engineers, drastically reducing environment provisioning time from 3 days to 15 minutes.</li>
-                <li><strong>Systems Rigor & 5G Quality Engineering:</strong> Acted as technical lead and authority for a cross-functional 5G development team. Designed and enforced automated quality gate architectures and static analysis pipelines for a mission-critical C++ codebase exceeding 600,000 lines of code.</li>
-                <li><strong>AI Enablement & Engineering Culture:</strong> Drove the early adoption of AI-augmented development within the organization. Designed reference workflows and coached engineering teams on integrating LLMs, prompt engineering, and agentic tools into daily software development lifecycles.</li>
+                <li><strong>AI Enablement & Engineering Culture:</strong> Initiated the early adoption of AI-augmented development. Designed reference workflows and coached engineering teams on integrating LLMs, prompt engineering, and agentic tools into daily software development lifecycles.</li>
+                <li><strong>Hyperscale Cloud & Platform Migration:</strong> Led the migration of mission-critical GitLab CI/CD pipelines to a 34,000-core OpenStack Cloud, scaling the platform to support 800+ concurrent developers with high resilience.</li>
+                <li><strong>Enterprise DevOps & DevEx Transformation:</strong> Architected a large-scale Docker containerization initiative, standardizing environments for 200+ engineers and reducing provisioning time from 3 days to 15 minutes.</li>
+                <li><strong>Systems Rigor & 5G Quality Engineering:</strong> Technical lead for a cross-functional 5G team. Designed automated quality gates and static analysis pipelines for a mission-critical codebase exceeding 600,000 lines of code.</li>
             </ul>
-            <div class="tech-stack"><strong>Tech Stack:</strong> OpenStack (34,000 cores), Docker, C/C++, Linux, GitLab CI/CD, Python, Ansible, Terraform.</div>
+            <p class="tech-stack-inline"><strong>Tech Stack:</strong> Python, Cloud Infrastructure (OpenStack), Docker, Linux, GitLab CI/CD, Ansible, Terraform.</p>
         </div>
+    </section>
 
-        <div class="job">
-            <div class="job-header">
-                <div class="job-title">Leading Software Design Engineer</div>
-                <div class="job-date">2011 – 2017</div>
+<section>
+        <h2>Previous Experience</h2>
+        <div class="job-simple">
+            <strong>Leading Software Design Engineer</strong> | Imagination Technologies, UK | 2011 – 2017
             </div>
-            <div class="job-company">Imagination Technologies, UK</div>
-            <ul>
-                <li><strong>Hardware Simulation & Validation:</strong> Developed highly optimized, SystemC-based software simulators for H.264/AVC and H.264 lossless video decoding standards.</li>
-                <li><strong>Silicon-Level Architecture:</strong> Built cycle-accurate hardware models used to validate complex decoder architectures prior to silicon fabrication. Contributed directly to core IP licensed to major global technology clients.</li>
-            </ul>
-            <div class="tech-stack"><strong>Tech Stack:</strong> C++, SystemC, Hardware Simulation.</div>
-        </div>
-
-        <div class="job">
-            <div class="job-header">
-                <div class="job-title">Software Development Specialist</div>
-                <div class="job-date">2007 – 2011</div>
-            </div>
-            <div class="job-company">Nokia Siemens Networks, Poland</div>
-            <ul>
-                <li><strong>RTOS & Low-Level Networking:</strong> Co-designed and implemented a high-performance MPLS packet classifier module for carrier-grade Ethernet switches operating within a strict Real-Time Operating System (RTOS) environment.</li>
-                <li><strong>Distributed Engineering:</strong> Collaborated within multinational engineering teams across five countries, delivering mission-critical telecommunications infrastructure.</li>
-            </ul>
-            <div class="tech-stack"><strong>Tech Stack:</strong> C/C++, RTOS, Embedded Systems, Networking (MPLS).</div>
+        <div class="job-simple">
+            <strong>Software Development Specialist</strong> | Nokia Siemens Networks, Poland | 2007 – 2011
         </div>
     </section>
 
     <section>
-        <h2>Education</h2>
+        <h2>Education & Languages</h2>
         <div class="education-item">
-            <strong>MSc Computer Science</strong> — Poznan University of Technology (2004 – 2006)
+            <strong>MSc Computer Science</strong> — Poznan University of Technology | <strong>BSc IT in Business</strong> — Bydgoszcz University
         </div>
-        <div class="education-item">
-            <strong>BSc IT in Business</strong> — Bydgoszcz University of Business (2001 – 2004)
+        <div class="education-item" style="margin-top: 4px;">
+            <strong>Languages:</strong> Polish (Native) | English (Professional Working Proficiency)
         </div>
-    </section>
-
-    <section>
-        <h2>Languages</h2>
-        <p><strong>Polish:</strong> Native | <strong>English:</strong> Professional Working Proficiency</p>
     </section>
 
 </body>
